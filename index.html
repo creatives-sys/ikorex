@@ -1,249 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-<title>ikorex — Intelligent Automation & Operations</title>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css">
-<script>
-  if (localStorage.getItem('introSeen') === 'true') {
-    document.documentElement.classList.add('skip-intro');
-  }
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>ikorex — Intelligent Automation & Operations</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <script>
+    if (localStorage.getItem('introSeen') === 'true') {
+      document.documentElement.classList.add('skip-intro');
+    }
+  </script>
 </head>
+
 <body>
-<script>
-  if (localStorage.getItem('introSeen') === 'true' && localStorage.getItem('theme') === 'light') {
-    document.body.classList.add('light-theme');
-  }
-</script>
+  <script>
+    if (localStorage.getItem('introSeen') === 'true' && localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-theme');
+    }
+  </script>
 
-<svg class="logo-gradient-defs" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="arrowGrad" x1="107" y1="110" x2="400" y2="167" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0F3BB0"/>
-      <stop offset="45%" stop-color="#1A6FBF"/>
-      <stop offset="80%" stop-color="#1BAE82"/>
-      <stop offset="100%" stop-color="#26D49C"/>
-    </linearGradient>
-  </defs>
-</svg>
+  <svg class="logo-gradient-defs" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="arrowGrad" x1="107" y1="110" x2="400" y2="167" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#0F3BB0" />
+        <stop offset="45%" stop-color="#1A6FBF" />
+        <stop offset="80%" stop-color="#1BAE82" />
+        <stop offset="100%" stop-color="#26D49C" />
+      </linearGradient>
+    </defs>
+  </svg>
 
-<div id="intro">
-  <div id="intro-bg"></div>
-  <div id="intro-bar"></div>
+  <div id="intro">
+    <div id="intro-bg"></div>
+    <div id="intro-bar"></div>
 
-  <!-- Cybernetic Grid Overlay Details -->
-  <div class="loader-status top-left">SYSTEM STATUS: INITIALIZING</div>
-  <div class="loader-status top-right">LOC: -37.8136° S | 144.9631° E</div>
-  <div class="loader-status bottom-left">SECURE CORRIDOR: ACTIVE</div>
-  <div class="loader-status bottom-right">IKOREX PIPELINE v2.4</div>
+    <!-- Cybernetic Grid Overlay Details -->
+    <div class="loader-status top-left">SYSTEM STATUS: INITIALIZING</div>
+    <div class="loader-status top-right">LOC: -37.8136° S | 144.9631° E</div>
+    <div class="loader-status bottom-left">SECURE CORRIDOR: ACTIVE</div>
+    <div class="loader-status bottom-right">IKOREX PIPELINE v2.4</div>
 
-  <div class="phrase-line" id="line1">Operations are complex</div>
-  <div class="phrase-line" id="line2">Efficiencies are rare</div>
-  <div class="phrase-line" id="line3">
-    <span class="highlight">Intelligent Automation</span>
-    <span class="subtext">is the answer</span>
+    <div class="phrase-line" id="line1">Operations are complex</div>
+    <div class="phrase-line" id="line2">Efficiencies are rare</div>
+    <div class="phrase-line" id="line3">
+      <span class="highlight">Intelligent Automation</span>
+      <span class="subtext">is the answer</span>
+    </div>
+
+    <div id="brand-reveal">
+      <div id="brand-mark-wrap">
+        <div id="brand-ring"></div>
+        <div id="brand-ring2"></div>
+        <div id="brand-mark-svg">
+          <img src="assets/images/logo-stacked.png" alt="IKOREX Mark" width="110" height="110">
+        </div>
+      </div>
+      <div id="brand-name-wrap">
+        <!-- <div class="bn-name"><span class="logo-i">I</span><span class="logo-kor">KORE</span><span
+            class="logo-ex">X</span></div>
+        <div id="brand-consultancy">Intelligent Automation</div> -->
+        <div id="brand-city">Melbourne, Australia</div>
+      </div>
+      <div id="brand-hr"></div>
+      <div id="brand-cta"><button onclick="launchSite()">Explore Capabilities</button></div>
+    </div>
   </div>
 
-  <div id="brand-reveal">
-    <div id="brand-mark-wrap">
-      <div id="brand-ring"></div>
-      <div id="brand-ring2"></div>
-      <div id="brand-mark-svg">
-        <img src="assets/images/logo-icon-blue.png" alt="IKOREX Mark" width="110" height="110">
+  <div id="site">
+
+    <nav>
+      <a class="nav-logo" href="index.html">
+        <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="header-logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a id="nhome" class="active" href="index.html">Home</a></li>
+        <li><a id="nsolutions" href="solutions.html">Solutions</a></li>
+        <li><a id="nservices" href="services.html">Services</a></li>
+        <li><a id="nabout" href="about.html">About</a></li>
+        <li><a id="ncontact" href="contact.html">Contact</a></li>
+      </ul>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
+          <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="btn-nav" onclick="location.href='contact.html'">Initiate Architecture</button>
+        <button class="menu-toggle" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
       </div>
+      <div class="scroll-progress-container">
+        <div class="scroll-progress-bar"></div>
+      </div>
+    </nav>
+
+    <div class="page active" id="page-home">
+      <div class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-eyebrow" data-sr="up">Enterprise Process Transformation · Australia</div>
+        <h1 class="hero-h" data-sr="up" data-sr-delay="1">Autonomous operations.<br>Engineered to <em>peak.</em></h1>
+        <p class="hero-sub" data-sr="up" data-sr-delay="2">We eliminate high operational overhead, build robust
+          automation architecture, and orchestrate intelligent systems that scale cleanly without errors.</p>
+        <div class="hero-btns" data-sr="up" data-sr-delay="3">
+          <button class="btn-primary" onclick="location.href='contact.html'">Request Scope Valuation</button>
+          <button class="btn-ghost" onclick="location.href='solutions.html'">Explore System Matrix</button>
+        </div>
+        <div class="hero-stats" data-sr="up" data-sr-delay="4">
+          <div class="stat">
+            <div class="stat-n">70%</div>
+            <div class="stat-l">Cost Isolation</div>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <div class="nav-i stat-n">10×</div>
+            <div class="stat-l">System Velocity</div>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <div class="stat-n">6mo</div>
+            <div class="stat-l">Capital Payback</div>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <div class="stat-n">99.9%</div>
+            <div class="stat-l">Accuracy Threshold</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee-band">
+        <div class="marquee-track">
+          <div class="mq-item">Robotic Process Automation</div>
+          <div class="mq-item">AI Computer Vision Monitoring</div>
+          <div class="mq-item">Order to Cash</div>
+          <div class="mq-item">Procure to Pay</div>
+          <div class="mq-item">Intelligent Finance & Accounting</div>
+          <div class="mq-item">Operational Optimization</div>
+          <div class="mq-item">Digital Transformation</div>
+          <div class="mq-item">Australian Compliance Architecture</div>
+        </div>
+      </div>
+
+      <div class="sav">
+        <div class="sav-inner">
+          <div data-sr="left">
+            <div class="eyebrow">Cost Isolation</div>
+            <h2 class="sec-title">Drive massive overhead reduction via <em>precision.</em></h2>
+            <p class="sec-body">Fragmented human steps create persistent friction — leading to costly mistakes,
+              transactional delays, and structural leaking. We help you systematically capture and eliminate this
+              variance.</p>
+            <div class="sav-pts">
+              <div class="sav-pt">
+                <div class="sav-dot"></div>
+                <p><strong>De-risk repetitive transaction handling.</strong> Autonomous workflows process high volumes
+                  smoothly without manual correction loops.</p>
+              </div>
+              <div class="sav-pt">
+                <div class="sav-dot"></div>
+                <p><strong>Continuous 24/7 runtime metrics.</strong> Scaled systems execute critical work around the
+                  clock at a minimized cost-per-execution profile.</p>
+              </div>
+              <div class="sav-pt">
+                <div class="sav-dot"></div>
+                <p><strong>Compounding capital return.</strong> Engagements target complete project amortization within
+                  180 days while driving recurring overhead reductions.</p>
+              </div>
+            </div>
+          </div>
+          <div data-sr="scale" data-sr-delay="1">
+            <div class="metrics-grid">
+              <div class="metric-card glow-card">
+                <div class="metric-num">70%</div>
+                <div class="metric-desc">Average drop in process transactional costs</div>
+              </div>
+              <div class="metric-card glow-card">
+                <div class="metric-num">90%</div>
+                <div class="metric-desc">Reduction in structural workflow errors</div>
+              </div>
+              <div class="metric-card glow-card">
+                <div class="metric-num">6mo</div>
+                <div class="metric-desc">Average operational payback duration</div>
+              </div>
+              <div class="metric-card glow-card">
+                <div class="metric-num">24/7</div>
+                <div class="metric-desc">Continuous real-time asset protection</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="priv-shield">
+        <div class="priv-shield-inner">
+          <div data-sr="left">
+            <div class="eyebrow">Data Protection & Trust</div>
+            <h2 class="sec-title">Enterprise data encryption.<br>Rigorous <em>sovereign privacy.</em></h2>
+            <p class="sec-body">We prioritize data protection and compliance at the core of our technical engineering
+              operations. Our high-velocity automation layouts and ledger management frameworks guarantee total
+              isolation of sensitive files.</p>
+          </div>
+          <div class="priv-shield-grid" data-sr="scale" data-sr-delay="1">
+            <div class="priv-shield-box glow-card">
+              <div class="priv-shield-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg></div>
+              <div class="priv-shield-title">Global Standards Alignment</div>
+              <div class="priv-shield-desc">Committed to Global Data Regulation Standards, ensuring secure end-to-end
+                access across financial vectors.</div>
+            </div>
+            <div class="priv-shield-box glow-card">
+              <div class="priv-shield-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h2.945M11 20.055V18a2 2 0 012-2h1a2 2 0 002-2v-1a2 2 0 012-2h2.055m-1.055 6a9 9 0 11-18 0z" />
+                </svg></div>
+              <div class="priv-shield-title">Sovereign Data Retention</div>
+              <div class="priv-shield-desc">Our technological interface structure ensures all confidential data is
+                safely retained within your home jurisdiction.</div>
+            </div>
+            <div class="priv-shield-box glow-card">
+              <div class="priv-shield-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg></div>
+              <div class="priv-shield-title">Anonymous Vision Core</div>
+              <div class="priv-shield-desc">AI camera vision behavior modeling runs 100% face-free, strictly preserving
+                customer anonymity and privacy metrics.</div>
+            </div>
+            <div class="priv-shield-box glow-card">
+              <div class="priv-shield-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg></div>
+              <div class="priv-shield-title">Audited Access Matrix</div>
+              <div class="priv-shield-desc">Strict zero-trust authentication loops control automated processing and
+                script executions to eliminate data leak vectors.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="smarter">
+        <div class="smarter-inner">
+          <div style="max-width:640px;" data-sr="up">
+            <div class="eyebrow">Strategic Strategy</div>
+            <h2 class="sec-title">Direct internal engineering to <em>high-value outcomes.</em></h2>
+            <p class="sec-body">By routing transactional work to digital automation layers, your human capital focuses
+              directly on high-leverage exceptions, vendor relationships, and growth strategy.</p>
+          </div>
+          <div class="smarter-grid">
+            <div class="sm-card glow-card" data-sr="up" data-sr-delay="1">
+              <div class="sm-num">01</div>
+              <div class="sm-title">Audit the Friction Layers</div>
+              <p class="sm-body">We trace transaction execution steps across your software stack to identify specific
+                performance bottlenecks before touching code.</p>
+            </div>
+            <div class="sm-card glow-card" data-sr="up" data-sr-delay="2">
+              <div class="sm-num">02</div>
+              <div class="sm-title">Architect Target Automation</div>
+              <p class="sm-body">We isolate the workflows offering the highest transactional impact, engineering
+                automated loops that deliver instant value.</p>
+            </div>
+            <div class="sm-card glow-card" data-sr="up" data-sr-delay="3">
+              <div class="sm-num">03</div>
+              <div class="sm-title">Re-channel Core Staff</div>
+              <p class="sm-body">When repetitive processing is handled automatically, teams step into exception
+                oversight roles, increasing overall company capabilities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intel">
+        <div class="intel-inner">
+          <div class="intel-hero">
+            <div class="eyebrow" data-sr="up" style="justify-content:center;margin-bottom:16px;">System Intelligence
+            </div>
+            <h2 class="sec-title" data-sr="up" data-sr-delay="1">Digital employee layers run execution.<br>Humans run
+              <em>strategic scaling.</em>
+            </h2>
+            <p class="sec-body" data-sr="up" data-sr-delay="2">Top-tier operators deploy reliable processing structures
+              today — shifting from isolated technology tests to scaled production environments across automation and
+              physical locations.</p>
+          </div>
+          <div class="intel-grid">
+            <div class="ig-cell glow-card" data-sr="left">
+              <div class="ig-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6FBF" stroke-width="2"
+                  stroke-linecap="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg></div>
+              <div class="ig-title">RPA & Operations Re-engineering</div>
+              <p class="ig-body">Bespoke software agents that validate records, reconcile complex accounts, and execute
+                multi-app data routines continuous and accurate.</p>
+            </div>
+            <div class="ig-cell glow-card" data-sr="right">
+              <div class="ig-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6FBF" stroke-width="2"
+                  stroke-linecap="round">
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                </svg></div>
+              <div class="ig-title">Real-Time Computer Vision AI</div>
+              <p class="ig-body">Continuous visual monitoring connected to existing cameras to run advanced retail loss
+                defense, tracking theft gestures to safeguard physical storefronts instantly.</p>
+            </div>
+            <div class="ig-cell glow-card" data-sr="left" data-sr-delay="1">
+              <div class="ig-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6FBF" stroke-width="2"
+                  stroke-linecap="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg></div>
+              <div class="ig-title">Intelligent Finance & Accounting</div>
+              <p class="ig-body">Continuous automated bookkeeping pathways combined with instant Australian standard
+                statement checks to track active cash health parameters dynamically.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap">
+        <h2 class="cta-t">Is manual data entry blocking your operational view?</h2>
+        <p class="cta-s">Connect with our systems architects. We will trace out your current core transaction paths and
+          pinpoint your best automation targets.</p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <button class="btn-primary" onclick="location.href='contact.html'">Connect with an Architect</button>
+          <button class="btn-ghost" onclick="location.href='services.html'">View Service Stack</button>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-inner">
+          <div class="footer-logo">
+            <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="footer-logo-img">
+            <div class="footer-tag">Melbourne, Australia</div>
+          </div>
+          <ul class="footer-links">
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="footer-copy">
+            © 2026 ikorex Intelligent Automation · <a class="privacy-link" href="privacy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </footer>
     </div>
-    <div id="brand-name-wrap">
-      <div class="bn-name"><span class="logo-i">I</span><span class="logo-kor">KORE</span><span class="logo-ex">X</span></div>
-      <div id="brand-consultancy">Intelligent Automation</div>
-      <div id="brand-city">Melbourne, Australia</div>
-    </div>
-    <div id="brand-hr"></div>
-    <div id="brand-cta"><button onclick="launchSite()">Explore Capabilities</button></div>
   </div>
-</div>
 
-<div id="site">
-
-  <nav>
-    <a class="nav-logo" href="index.html">
-      <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="header-logo-img">
-    </a>
-    <ul class="nav-links">
-      <li><a id="nhome" class="active" href="index.html">Home</a></li>
-      <li><a id="nsolutions" href="solutions.html">Solutions</a></li>
-      <li><a id="nservices" href="services.html">Services</a></li>
-      <li><a id="nabout" href="about.html">About</a></li>
-      <li><a id="ncontact" href="contact.html">Contact</a></li>
-    </ul>
-    <div style="display:flex; align-items:center; gap:12px;">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
-        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      </button>
-      <button class="btn-nav" onclick="location.href='contact.html'">Initiate Architecture</button>
-      <button class="menu-toggle" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="scroll-progress-container">
-      <div class="scroll-progress-bar"></div>
-    </div>
-  </nav>
-
-  <div class="page active" id="page-home">
-    <div class="hero">
-      <div class="hero-bg"></div>
-      <div class="hero-eyebrow" data-sr="up">Enterprise Process Transformation · Australia</div>
-      <h1 class="hero-h" data-sr="up" data-sr-delay="1">Autonomous operations.<br>Engineered to <em>peak.</em></h1>
-      <p class="hero-sub" data-sr="up" data-sr-delay="2">We eliminate high operational overhead, build robust automation architecture, and orchestrate intelligent systems that scale cleanly without errors.</p>
-      <div class="hero-btns" data-sr="up" data-sr-delay="3">
-        <button class="btn-primary" onclick="location.href='contact.html'">Request Scope Valuation</button>
-        <button class="btn-ghost" onclick="location.href='solutions.html'">Explore System Matrix</button>
-      </div>
-      <div class="hero-stats" data-sr="up" data-sr-delay="4">
-        <div class="stat"><div class="stat-n">70%</div><div class="stat-l">Cost Isolation</div></div>
-        <div class="stat-div"></div>
-        <div class="stat"><div class="nav-i stat-n">10×</div><div class="stat-l">System Velocity</div></div>
-        <div class="stat-div"></div>
-        <div class="stat"><div class="stat-n">6mo</div><div class="stat-l">Capital Payback</div></div>
-        <div class="stat-div"></div>
-        <div class="stat"><div class="stat-n">99.9%</div><div class="stat-l">Accuracy Threshold</div></div>
-      </div>
-    </div>
-
-    <div class="marquee-band"><div class="marquee-track">
-      <div class="mq-item">Robotic Process Automation</div><div class="mq-item">AI Computer Vision Monitoring</div><div class="mq-item">Order to Cash</div><div class="mq-item">Procure to Pay</div><div class="mq-item">Intelligent Finance & Accounting</div><div class="mq-item">Operational Optimization</div><div class="mq-item">Digital Transformation</div><div class="mq-item">Australian Compliance Architecture</div>
-    </div></div>
-
-    <div class="sav">
-      <div class="sav-inner">
-        <div data-sr="left">
-          <div class="eyebrow">Cost Isolation</div>
-          <h2 class="sec-title">Drive massive overhead reduction via <em>precision.</em></h2>
-          <p class="sec-body">Fragmented human steps create persistent friction — leading to costly mistakes, transactional delays, and structural leaking. We help you systematically capture and eliminate this variance.</p>
-          <div class="sav-pts">
-            <div class="sav-pt"><div class="sav-dot"></div><p><strong>De-risk repetitive transaction handling.</strong> Autonomous workflows process high volumes smoothly without manual correction loops.</p></div>
-            <div class="sav-pt"><div class="sav-dot"></div><p><strong>Continuous 24/7 runtime metrics.</strong> Scaled systems execute critical work around the clock at a minimized cost-per-execution profile.</p></div>
-            <div class="sav-pt"><div class="sav-dot"></div><p><strong>Compounding capital return.</strong> Engagements target complete project amortization within 180 days while driving recurring overhead reductions.</p></div>
-          </div>
-        </div>
-        <div data-sr="scale" data-sr-delay="1">
-          <div class="metrics-grid">
-            <div class="metric-card glow-card"><div class="metric-num">70%</div><div class="metric-desc">Average drop in process transactional costs</div></div>
-            <div class="metric-card glow-card"><div class="metric-num">90%</div><div class="metric-desc">Reduction in structural workflow errors</div></div>
-            <div class="metric-card glow-card"><div class="metric-num">6mo</div><div class="metric-desc">Average operational payback duration</div></div>
-            <div class="metric-card glow-card"><div class="metric-num">24/7</div><div class="metric-desc">Continuous real-time asset protection</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="priv-shield">
-      <div class="priv-shield-inner">
-        <div data-sr="left">
-          <div class="eyebrow">Data Protection & Trust</div>
-          <h2 class="sec-title">Enterprise data encryption.<br>Rigorous <em>sovereign privacy.</em></h2>
-          <p class="sec-body">We prioritize data protection and compliance at the core of our technical engineering operations. Our high-velocity automation layouts and ledger management frameworks guarantee total isolation of sensitive files.</p>
-        </div>
-        <div class="priv-shield-grid" data-sr="scale" data-sr-delay="1">
-          <div class="priv-shield-box glow-card">
-            <div class="priv-shield-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg></div>
-            <div class="priv-shield-title">Global Standards Alignment</div>
-            <div class="priv-shield-desc">Committed to Global Data Regulation Standards, ensuring secure end-to-end access across financial vectors.</div>
-          </div>
-          <div class="priv-shield-box glow-card">
-            <div class="priv-shield-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h2.945M11 20.055V18a2 2 0 012-2h1a2 2 0 002-2v-1a2 2 0 012-2h2.055m-1.055 6a9 9 0 11-18 0z" /></svg></div>
-            <div class="priv-shield-title">Sovereign Data Retention</div>
-            <div class="priv-shield-desc">Our technological interface structure ensures all confidential data is safely retained within your home jurisdiction.</div>
-          </div>
-          <div class="priv-shield-box glow-card">
-            <div class="priv-shield-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg></div>
-            <div class="priv-shield-title">Anonymous Vision Core</div>
-            <div class="priv-shield-desc">AI camera vision behavior modeling runs 100% face-free, strictly preserving customer anonymity and privacy metrics.</div>
-          </div>
-          <div class="priv-shield-box glow-card">
-            <div class="priv-shield-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg></div>
-            <div class="priv-shield-title">Audited Access Matrix</div>
-            <div class="priv-shield-desc">Strict zero-trust authentication loops control automated processing and script executions to eliminate data leak vectors.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="smarter">
-      <div class="smarter-inner">
-        <div style="max-width:640px;" data-sr="up">
-          <div class="eyebrow">Strategic Strategy</div>
-          <h2 class="sec-title">Direct internal engineering to <em>high-value outcomes.</em></h2>
-          <p class="sec-body">By routing transactional work to digital automation layers, your human capital focuses directly on high-leverage exceptions, vendor relationships, and growth strategy.</p>
-        </div>
-        <div class="smarter-grid">
-          <div class="sm-card glow-card" data-sr="up" data-sr-delay="1"><div class="sm-num">01</div><div class="sm-title">Audit the Friction Layers</div><p class="sm-body">We trace transaction execution steps across your software stack to identify specific performance bottlenecks before touching code.</p></div>
-          <div class="sm-card glow-card" data-sr="up" data-sr-delay="2"><div class="sm-num">02</div><div class="sm-title">Architect Target Automation</div><p class="sm-body">We isolate the workflows offering the highest transactional impact, engineering automated loops that deliver instant value.</p></div>
-          <div class="sm-card glow-card" data-sr="up" data-sr-delay="3"><div class="sm-num">03</div><div class="sm-title">Re-channel Core Staff</div><p class="sm-body">When repetitive processing is handled automatically, teams step into exception oversight roles, increasing overall company capabilities.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="intel">
-      <div class="intel-inner">
-        <div class="intel-hero">
-          <div class="eyebrow" data-sr="up" style="justify-content:center;margin-bottom:16px;">System Intelligence</div>
-          <h2 class="sec-title" data-sr="up" data-sr-delay="1">Digital employee layers run execution.<br>Humans run <em>strategic scaling.</em></h2>
-          <p class="sec-body" data-sr="up" data-sr-delay="2">Top-tier operators deploy reliable processing structures today — shifting from isolated technology tests to scaled production environments across automation and physical locations.</p>
-        </div>
-        <div class="intel-grid">
-          <div class="ig-cell glow-card" data-sr="left">
-            <div class="ig-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6FBF" stroke-width="2" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-            <div class="ig-title">RPA & Operations Re-engineering</div>
-            <p class="ig-body">Bespoke software agents that validate records, reconcile complex accounts, and execute multi-app data routines continuous and accurate.</p>
-          </div>
-          <div class="ig-cell glow-card" data-sr="right">
-            <div class="ig-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6FBF" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
-            <div class="ig-title">Real-Time Computer Vision AI</div>
-            <p class="ig-body">Continuous visual monitoring connected to existing cameras to run advanced retail loss defense, tracking theft gestures to safeguard physical storefronts instantly.</p>
-          </div>
-          <div class="ig-cell glow-card" data-sr="left" data-sr-delay="1">
-            <div class="ig-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6FBF" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-            <div class="ig-title">Intelligent Finance & Accounting</div>
-            <p class="ig-body">Continuous automated bookkeeping pathways combined with instant Australian standard statement checks to track active cash health parameters dynamically.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cta-wrap">
-      <h2 class="cta-t">Is manual data entry blocking your operational view?</h2>
-      <p class="cta-s">Connect with our systems architects. We will trace out your current core transaction paths and pinpoint your best automation targets.</p>
-      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-        <button class="btn-primary" onclick="location.href='contact.html'">Connect with an Architect</button>
-        <button class="btn-ghost" onclick="location.href='services.html'">View Service Stack</button>
-      </div>
-    </div>
-
-    <footer>
-      <div class="footer-inner">
-        <div class="footer-logo">
-          <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="footer-logo-img">
-          <div class="footer-tag">Melbourne, Australia</div>
-        </div>
-        <ul class="footer-links">
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="footer-copy">
-          © 2026 ikorex Intelligent Automation · <a class="privacy-link" href="privacy.html">Privacy Policy</a>
-        </div>
-      </div>
-    </footer>
-  </div>
-</div>
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>
