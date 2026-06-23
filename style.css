@@ -973,7 +973,8 @@ body.light-theme .glow-card:hover::after {
 .contact-form, 
 .metric-card, 
 .priv-shield-box,
-.mq-card {
+.mq-card,
+.bento-card {
   background: var(--card) !important;
   border: 1px solid var(--border) !important;
   border-radius: 18px !important;
@@ -991,7 +992,8 @@ body.light-theme .glow-card:hover::after {
 .val-card:hover,
 .team-card:hover,
 .priv-shield-box:hover,
-.mq-card:hover {
+.mq-card:hover,
+.bento-card:hover {
   transform: translateY(-2px) scale(1.01) !important;
   box-shadow: 0 0 30px var(--shadow-glow) !important;
   border-color: var(--border-glow) !important;
@@ -1950,6 +1952,209 @@ footer {
 }
 
 /* ==========================================================================
+   BENTO GRID / MODULAR AI SECTION
+   ========================================================================== */
+.modular-ai {
+  padding: 120px 5%;
+  background: var(--darker);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.modular-ai-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.modular-ai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+  text-align: left;
+}
+.modular-ai-header .header-left {
+  max-width: 600px;
+}
+.modular-ai-header .view-all-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease;
+  cursor: pointer;
+}
+.modular-ai-header .view-all-btn:hover {
+  gap: 10px;
+}
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 340px;
+  gap: 20px;
+}
+.bento-card {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.bento-card.large-card {
+  grid-column: span 2;
+}
+.bento-card.small-card {
+  grid-column: span 1;
+}
+.bento-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+.bento-card:hover .bento-bg {
+  transform: scale(1.04);
+}
+.bento-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(3, 5, 8, 0.95) 0%, rgba(3, 5, 8, 0.3) 60%, transparent 100%);
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+body.light-theme .bento-overlay {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.3) 60%, transparent 100%);
+}
+.bento-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px;
+  z-index: 3;
+  text-align: left;
+}
+.badge-chip {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--blue);
+  color: #fff !important;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+.bento-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.bento-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--text2);
+  line-height: 1.4;
+}
+.bento-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(0, 136, 255, 0.05);
+  border: 1px solid rgba(0, 136, 255, 0.12) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.bento-icon-wrapper svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--blue);
+}
+
+/* Performance Stat Bento Card */
+.performance-card {
+  background: var(--grad) !important;
+  color: #FFFFFF !important;
+  padding: 40px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border: none !important;
+}
+body.light-theme .performance-card {
+  color: #FFFFFF !important;
+}
+.perf-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.perf-stats {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  margin: 20px 0;
+}
+.perf-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+.perf-num {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 52px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 1;
+  color: #FFFFFF;
+}
+.perf-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 6px;
+}
+.perf-footer-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.4;
+  max-width: 380px;
+  margin: 0;
+  text-align: left;
+}
+.perf-bg-icon {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 80px;
+  height: 80px;
+  opacity: 0.08;
+  color: #FFFFFF;
+  pointer-events: none;
+}
+.perf-bg-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================================================
    RESPONSIVE BREAKPOINTS
    ========================================================================== */
 body.menu-open {
@@ -2057,6 +2262,33 @@ body.menu-open {
   }
   .values-grid, .team-grid, .priv-shield-grid {
     grid-template-columns: 1fr;
+  }
+  
+  /* Bento Grid Responsive */
+  .bento-grid {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: auto !important;
+    gap: 16px !important;
+  }
+  .bento-card.large-card, .bento-card.small-card {
+    grid-column: span 1 !important;
+    height: 300px !important;
+  }
+  .performance-card {
+    height: auto !important;
+    padding: 30px !important;
+  }
+  .perf-stats {
+    gap: 40px !important;
+    margin: 24px 0 !important;
+  }
+  .perf-num {
+    font-size: 40px !important;
+  }
+  .modular-ai-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
   }
   .footer-inner {
     flex-direction: column;
