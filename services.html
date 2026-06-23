@@ -1,139 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-<title>ikorex — Service Pillars</title>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>ikorex — Service Pillars</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="light-theme">
 
-<svg class="logo-gradient-defs" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="arrowGrad" x1="107" y1="110" x2="400" y2="167" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0F3BB0"/>
-      <stop offset="45%" stop-color="#1A6FBF"/>
-      <stop offset="80%" stop-color="#1BAE82"/>
-      <stop offset="100%" stop-color="#26D49C"/>
-    </linearGradient>
-  </defs>
-</svg>
+  <svg class="logo-gradient-defs" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="arrowGrad" x1="107" y1="110" x2="400" y2="167" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#0F3BB0" />
+        <stop offset="45%" stop-color="#1A6FBF" />
+        <stop offset="80%" stop-color="#1BAE82" />
+        <stop offset="100%" stop-color="#26D49C" />
+      </linearGradient>
+    </defs>
+  </svg>
 
-<div id="site" class="visible">
+  <div id="site" class="visible">
 
-  <nav>
-    <a class="nav-logo" href="index.html">
-      <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="header-logo-img">
-    </a>
-    <ul class="nav-links">
-      <li><a id="nhome" href="index.html">Home</a></li>
-      <li><a id="nsolutions" href="solutions.html">Solutions</a></li>
-      <li><a id="nservices" class="active" href="services.html">Services</a></li>
-      <li><a id="nabout" href="about.html">About</a></li>
-      <li><a id="ncontact" href="contact.html">Contact</a></li>
-    </ul>
-    <div style="display:flex; align-items:center; gap:12px;">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
-        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      </button>
-      <button class="btn-nav" onclick="location.href='contact.html'">Initiate Architecture</button>
-      <button class="menu-toggle" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="scroll-progress-container">
-      <div class="scroll-progress-bar"></div>
-    </div>
-  </nav>
+    <nav>
+      <a class="nav-logo" href="index.html">
+        <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="header-logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a id="nhome" href="index.html">Home</a></li>
+        <li><a id="nservices" class="active" href="services.html">Services</a></li>
+        <li><a id="nsolutions" href="solutions.html">Solutions</a></li>
 
-  <div class="page active" id="page-services">
-    <div class="page-hero">
-      <div class="eyebrow animate-hero-1" style="justify-content:center;">Functional Pillars</div>
-      <h1 class="page-hero-title animate-hero-2">Four core engines.<br>Built for absolute <em>operational precision.</em></h1>
-      <p class="page-hero-sub animate-hero-3">From modern software robots to real-time artificial vision models — we deploy high-performance operational systems.</p>
-    </div>
-    
-    <div class="services-grid">
-      <div class="svc-card glow-card" data-sr="up">
-        <div class="svc-num">01</div>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6FBF" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <div class="svc-title">RPA & Workflow Re-engineering</div>
-        <p class="svc-body">We eliminate repetitive manual steps by wrapping software bots around your legacy apps, maximizing transaction flow speeds. We integrate operations audits directly into the automation layer to remove process waste before writing code.</p>
-        <div class="svc-sub-list">
-          <div class="svc-sub-item"><div class="svc-sub-dot"></div>Cross-system data synchronization architecture</div>
-          <div class="svc-sub-item"><div class="svc-sub-dot"></div>UiPath & Microsoft Power Automate deployment</div>
-          <div class="svc-sub-item"><div class="svc-sub-dot"></div>Lean Six Sigma process footprint modernization</div>
+        <li><a id="nabout" href="about.html">About</a></li>
+        <li><a id="ncontact" href="contact.html">Contact</a></li>
+      </ul>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
+          <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="btn-nav" onclick="location.href='contact.html'">Initiate Architecture</button>
+        <button class="menu-toggle" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="scroll-progress-container">
+        <div class="scroll-progress-bar"></div>
+      </div>
+    </nav>
+
+    <div class="page active" id="page-services">
+      <div class="page-hero">
+        <div class="eyebrow animate-hero-1" style="justify-content:center;">Functional Pillars</div>
+        <h1 class="page-hero-title animate-hero-2">Four core engines.<br>Built for absolute <em>operational
+            precision.</em></h1>
+        <p class="page-hero-sub animate-hero-3">From modern software robots to real-time artificial vision models — we
+          deploy high-performance operational systems.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="svc-card glow-card" data-sr="up">
+          <div class="svc-num">01</div>
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6FBF" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg></div>
+          <div class="svc-title">RPA & Workflow Re-engineering</div>
+          <p class="svc-body">We eliminate repetitive manual steps by wrapping software bots around your legacy apps,
+            maximizing transaction flow speeds. We integrate operations audits directly into the automation layer to
+            remove process waste before writing code.</p>
+          <div class="svc-sub-list">
+            <div class="svc-sub-item">
+              <div class="svc-sub-dot"></div>Cross-system data synchronization architecture
+            </div>
+            <div class="svc-sub-item">
+              <div class="svc-sub-dot"></div>UiPath & Microsoft Power Automate deployment
+            </div>
+            <div class="svc-sub-item">
+              <div class="svc-sub-dot"></div>Lean Six Sigma process footprint modernization
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card glow-card" data-sr="up" data-sr-delay="1">
+          <div class="svc-num">02</div>
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6FBF" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg></div>
+          <div class="svc-title">AI Camera Security Monitoring</div>
+          <p class="svc-body">Using state-of-the-art computer vision tech, we integrate with your current on-site camera
+            networks to track behavior models, contextually isolating real-time concealment actions to shut down retail
+            loss events fast.</p>
+          <div class="svc-sub-list">
+            <div class="svc-sub-item">
+              <div class="svc-sub-dot"></div>Advanced in-aisle gesture classification models
+            </div>
+            <div class="svc-sub-item">
+              <div class="svc-sub-dot"></div>Instant on-floor smart alerts with short proof clips
+            </div>
+            <div class="svc-sub-item">
+              <div class="svc-sub-dot"></div>100% face-free, anonymous behavioral profiling
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card glow-card" data-sr="up" data-sr-delay="2">
+          <div class="svc-num">03</div>
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6FBF" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg></div>
+          <div class="svc-title">Accounting & Bookkeeping Services</div>
+          <p class="svc-body">Reliable day-to-day bookkeeping structures engineered directly inside modern cloud
+            applications. We maintain constant oversight of daily transaction files to keep month-end balances locked
+            and accurate.</p>
+          <div class="svc-sub-list">
+            <div class="svc-sub-item">
+              <div class="svc-sub-dot"></div>Sales, procurement logs, and credit card reconciliation
+            </div>
+            <div class="svc-sub-item">
+              <div class="svc-sub-dot"></div>Xero, MYOB, and QuickBooks tech setup & migrations
+            </div>
+            <div class="svc-sub-item">
+              <div class="svc-sub-dot"></div>Granular project job costing and cross-site accounting
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-card glow-card" data-sr="up" data-sr-delay="3">
+          <div class="svc-num">04</div>
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6FBF" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+            </svg></div>
+          <div class="svc-title">Financial Reporting & Compliance</div>
+          <p class="svc-body">Convert your raw financial data streams into verified insight packs. We shape all
+            financial outputs to match local Australian compliance targets, ensuring flawless transparency for board
+            reviews.</p>
+          <div class="svc-sub-list">
+            <div class="svc-sub-item">
+              <div class="svc-sub-dot"></div>Full AASB & IFRS statement frameworks
+            </div>
+            <div class="svc-sub-item">
+              <div class="svc-sub-dot"></div>Live budget vs. actual variation logging engines
+            </div>
+            <div class="svc-sub-item">
+              <div class="svc-sub-dot"></div>CFO director packages and automated metric panels
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="svc-card glow-card" data-sr="up" data-sr-delay="1">
-        <div class="svc-num">02</div>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6FBF" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-        <div class="svc-title">AI Camera Security Monitoring</div>
-        <p class="svc-body">Using state-of-the-art computer vision tech, we integrate with your current on-site camera networks to track behavior models, contextually isolating real-time concealment actions to shut down retail loss events fast.</p>
-        <div class="svc-sub-list">
-          <div class="svc-sub-item"><div class="svc-sub-dot"></div>Advanced in-aisle gesture classification models</div>
-          <div class="svc-sub-item"><div class="svc-sub-dot"></div>Instant on-floor smart alerts with short proof clips</div>
-          <div class="svc-sub-item"><div class="svc-sub-dot"></div>100% face-free, anonymous behavioral profiling</div>
-        </div>
-      </div>
-
-      <div class="svc-card glow-card" data-sr="up" data-sr-delay="2">
-        <div class="svc-num">03</div>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6FBF" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <div class="svc-title">Accounting & Bookkeeping Services</div>
-        <p class="svc-body">Reliable day-to-day bookkeeping structures engineered directly inside modern cloud applications. We maintain constant oversight of daily transaction files to keep month-end balances locked and accurate.</p>
-        <div class="svc-sub-list">
-          <div class="svc-sub-item"><div class="svc-sub-dot"></div>Sales, procurement logs, and credit card reconciliation</div>
-          <div class="svc-sub-item"><div class="svc-sub-dot"></div>Xero, MYOB, and QuickBooks tech setup & migrations</div>
-          <div class="svc-sub-item"><div class="svc-sub-dot"></div>Granular project job costing and cross-site accounting</div>
-        </div>
-      </div>
-
-      <div class="svc-card glow-card" data-sr="up" data-sr-delay="3">
-        <div class="svc-num">04</div>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6FBF" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-        <div class="svc-title">Financial Reporting & Compliance</div>
-        <p class="svc-body">Convert your raw financial data streams into verified insight packs. We shape all financial outputs to match local Australian compliance targets, ensuring flawless transparency for board reviews.</p>
-        <div class="svc-sub-list">
-          <div class="svc-sub-item"><div class="svc-sub-dot"></div>Full AASB & IFRS statement frameworks</div>
-          <div class="svc-sub-item"><div class="svc-sub-dot"></div>Live budget vs. actual variation logging engines</div>
-          <div class="svc-sub-item"><div class="svc-sub-dot"></div>CFO director packages and automated metric panels</div>
+      <div class="cta-wrap">
+        <h2 class="cta-t">Is manual data entry blocking your operational view?</h2>
+        <p class="cta-s">Connect with our systems architects. We will trace out your current core transaction paths and
+          pinpoint your best automation targets.</p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <button class="btn-primary" onclick="location.href='contact.html'">Connect with an Architect</button>
+          <button class="btn-ghost" onclick="location.href='services.html'">View Service Stack</button>
         </div>
       </div>
     </div>
 
-    <div class="cta-wrap">
-      <h2 class="cta-t">Is manual data entry blocking your operational view?</h2>
-      <p class="cta-s">Connect with our systems architects. We will trace out your current core transaction paths and pinpoint your best automation targets.</p>
-      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-        <button class="btn-primary" onclick="location.href='contact.html'">Connect with an Architect</button>
-        <button class="btn-ghost" onclick="location.href='services.html'">View Service Stack</button>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="footer-logo-img">
+          <div class="footer-tag">Melbourne, Australia</div>
+        </div>
+        <ul class="footer-links">
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="footer-copy">
+          © 2026 ikorex Intelligent Automation · <a class="privacy-link" href="privacy.html">Privacy Policy</a>
+        </div>
       </div>
-    </div>
+    </footer>
   </div>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">
-        <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="footer-logo-img">
-        <div class="footer-tag">Melbourne, Australia</div>
-      </div>
-      <ul class="footer-links">
-        <li><a href="solutions.html">Solutions</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="footer-copy">
-        © 2026 ikorex Intelligent Automation · <a class="privacy-link" href="privacy.html">Privacy Policy</a>
-      </div>
-    </div>
-  </footer>
-</div>
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>

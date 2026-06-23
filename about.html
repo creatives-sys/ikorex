@@ -1,132 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-<title>ikorex — Meet the Team</title>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>ikorex — Meet the Team</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="light-theme">
 
-<svg class="logo-gradient-defs" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="arrowGrad" x1="107" y1="110" x2="400" y2="167" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0F3BB0"/>
-      <stop offset="45%" stop-color="#1A6FBF"/>
-      <stop offset="80%" stop-color="#1BAE82"/>
-      <stop offset="100%" stop-color="#26D49C"/>
-    </linearGradient>
-  </defs>
-</svg>
+  <svg class="logo-gradient-defs" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="arrowGrad" x1="107" y1="110" x2="400" y2="167" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#0F3BB0" />
+        <stop offset="45%" stop-color="#1A6FBF" />
+        <stop offset="80%" stop-color="#1BAE82" />
+        <stop offset="100%" stop-color="#26D49C" />
+      </linearGradient>
+    </defs>
+  </svg>
 
-<div id="site" class="visible">
+  <div id="site" class="visible">
 
-  <nav>
-    <a class="nav-logo" href="index.html">
-      <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="header-logo-img">
-    </a>
-    <ul class="nav-links">
-      <li><a id="nhome" href="index.html">Home</a></li>
-      <li><a id="nsolutions" href="solutions.html">Solutions</a></li>
-      <li><a id="nservices" href="services.html">Services</a></li>
-      <li><a id="nabout" class="active" href="about.html">About</a></li>
-      <li><a id="ncontact" href="contact.html">Contact</a></li>
-    </ul>
-    <div style="display:flex; align-items:center; gap:12px;">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
-        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      </button>
-      <button class="btn-nav" onclick="location.href='contact.html'">Initiate Architecture</button>
-      <button class="menu-toggle" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="scroll-progress-container">
-      <div class="scroll-progress-bar"></div>
-    </div>
-  </nav>
+    <nav>
+      <a class="nav-logo" href="index.html">
+        <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="header-logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a id="nhome" href="index.html">Home</a></li>
+        <li><a id="nservices" href="services.html">Services</a></li>
 
-  <div class="page active" id="page-about">
-    <div class="page-hero">
-      <div class="eyebrow animate-hero-1" style="justify-content:center;">Our Profile</div>
-      <h1 class="page-hero-title animate-hero-2">Meet the Team</h1>
-      <p class="page-hero-sub animate-hero-3">Our team of Chartered Accountants forms the pillars of Finbook Global armed with exceptional knowledge and commitment.</p>
-    </div>
-    
-    <div class="about-story">
-      <div data-sr="left">
-        <div class="eyebrow">Expertise</div>
-        <h2 class="section-title">Empowering Excellence<br><em>Beyond Boundaries</em></h2>
-        <p class="section-body">
-          Expertising in accounting, bookkeeping, tax planning and advisory, financial reporting, internal audit and risk management, we help businesses like yours thrive. Our experience spans a variety of industries, including trading, manufacturing, hospitality, healthcare, banking, IT, real estate, and construction.
-        </p>
+        <li><a id="nsolutions" href="solutions.html">Solutions</a></li>
+        <li><a id="nabout" class="active" href="about.html">About</a></li>
+        <li><a id="ncontact" href="contact.html">Contact</a></li>
+      </ul>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
+          <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="btn-nav" onclick="location.href='contact.html'">Initiate Architecture</button>
+        <button class="menu-toggle" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <div class="metrics-grid" data-sr="scale" data-sr-delay="1">
-        <div class="metric-card glow-card">
-          <div class="metric-num">India</div>
-          <div class="metric-desc">Competent and customized solutions from India at affordable prices, facilitating cost savings by around 40%.</div>
-        </div>
-        <div class="metric-card glow-card">
-          <div class="metric-num">SaaS</div>
-          <div class="metric-desc">Access the real time profitability and business insights through Finface, our Saas Platform.</div>
-        </div>
+      <div class="scroll-progress-container">
+        <div class="scroll-progress-bar"></div>
       </div>
-    </div>
+    </nav>
 
-    <div class="team-strip" style="border-top: 1px solid var(--border);">
-      <div class="eyebrow" style="margin-bottom: 16px;">Chartered Accountants & Leadership</div>
-      <h2 class="section-title" style="margin-bottom: 32px;">Our Professionals</h2>
-      <div class="team-grid">
-        <div class="team-card glow-card" data-sr="up">
-          <div class="team-avatar">RAM</div>
-          <div class="team-name">Raj Anindya Mitra</div>
-          <div class="team-role">B.com, ACA (ICAEW)<br>Chartered Accountant / Director</div>
+    <div class="page active" id="page-about">
+      <div class="page-hero">
+        <div class="eyebrow animate-hero-1" style="justify-content:center;">Our Profile</div>
+        <h1 class="page-hero-title animate-hero-2">Meet the Team</h1>
+        <p class="page-hero-sub animate-hero-3">Our team of Chartered Accountants forms the pillars of Finbook Global
+          armed with exceptional knowledge and commitment.</p>
+      </div>
+
+      <div class="about-story">
+        <div data-sr="left">
+          <div class="eyebrow">Expertise</div>
+          <h2 class="section-title">Empowering Excellence<br><em>Beyond Boundaries</em></h2>
+          <p class="section-body">
+            Expertising in accounting, bookkeeping, tax planning and advisory, financial reporting, internal audit and
+            risk management, we help businesses like yours thrive. Our experience spans a variety of industries,
+            including trading, manufacturing, hospitality, healthcare, banking, IT, real estate, and construction.
+          </p>
         </div>
-        <div class="team-card glow-card" data-sr="up" data-sr-delay="1">
-          <div class="team-avatar">RF</div>
-          <div class="team-name">Ruble Francis</div>
-          <div class="team-role">BSc Mathematics &<br>Actuarial Science</div>
-        </div>
-        <div class="team-card glow-card" data-sr="up" data-sr-delay="2">
-          <div class="team-avatar">RJ</div>
-          <div class="team-name">Reuben Jose</div>
-          <div class="team-role">B.com, ACA<br>Chartered Accountant / Director</div>
-        </div>
-        <div class="team-card glow-card" data-sr="up" data-sr-delay="3">
-          <div class="team-avatar">AT</div>
-          <div class="team-name">Alen T Jose</div>
-          <div class="team-role">B.com, ACA<br>Chartered Accountant / Director</div>
-        </div>
-        <div class="team-card glow-card" data-sr="up" data-sr-delay="4">
-          <div class="team-avatar">AJ</div>
-          <div class="team-name">Allen Jose</div>
-          <div class="team-role">B.com, ACA<br>Chartered Accountant / Director</div>
+        <div class="metrics-grid" data-sr="scale" data-sr-delay="1">
+          <div class="metric-card glow-card">
+            <div class="metric-num">India</div>
+            <div class="metric-desc">Competent and customized solutions from India at affordable prices, facilitating
+              cost savings by around 40%.</div>
+          </div>
+          <div class="metric-card glow-card">
+            <div class="metric-num">SaaS</div>
+            <div class="metric-desc">Access the real time profitability and business insights through Finface, our Saas
+              Platform.</div>
+          </div>
         </div>
       </div>
+
+      <div class="team-strip" style="border-top: 1px solid var(--border);">
+        <div class="eyebrow" style="margin-bottom: 16px;">Chartered Accountants & Leadership</div>
+        <h2 class="section-title" style="margin-bottom: 32px;">Our Professionals</h2>
+        <div class="team-grid">
+          <div class="team-card glow-card" data-sr="up">
+            <div class="team-avatar">RAM</div>
+            <div class="team-name">Raj Anindya Mitra</div>
+            <div class="team-role">B.com, ACA (ICAEW)<br>Chartered Accountant / Director</div>
+          </div>
+          <div class="team-card glow-card" data-sr="up" data-sr-delay="1">
+            <div class="team-avatar">RF</div>
+            <div class="team-name">Ruble Francis</div>
+            <div class="team-role">BSc Mathematics &<br>Actuarial Science</div>
+          </div>
+          <div class="team-card glow-card" data-sr="up" data-sr-delay="2">
+            <div class="team-avatar">RJ</div>
+            <div class="team-name">Reuben Jose</div>
+            <div class="team-role">B.com, ACA<br>Chartered Accountant / Director</div>
+          </div>
+          <div class="team-card glow-card" data-sr="up" data-sr-delay="3">
+            <div class="team-avatar">AT</div>
+            <div class="team-name">Alen T Jose</div>
+            <div class="team-role">B.com, ACA<br>Chartered Accountant / Director</div>
+          </div>
+          <div class="team-card glow-card" data-sr="up" data-sr-delay="4">
+            <div class="team-avatar">AJ</div>
+            <div class="team-name">Allen Jose</div>
+            <div class="team-role">B.com, ACA<br>Chartered Accountant / Director</div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="footer-logo-img">
+          <div class="footer-tag">Melbourne, Australia</div>
+        </div>
+        <ul class="footer-links">
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="footer-copy">
+          © 2026 ikorex Intelligent Automation · <a class="privacy-link" href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
   </div>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">
-        <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="footer-logo-img">
-        <div class="footer-tag">Melbourne, Australia</div>
-      </div>
-      <ul class="footer-links">
-        <li><a href="solutions.html">Solutions</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="footer-copy">
-        © 2026 ikorex Intelligent Automation · <a class="privacy-link" href="privacy.html">Privacy Policy</a>
-      </div>
-    </div>
-  </footer>
-</div>
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>

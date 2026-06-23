@@ -30,7 +30,16 @@ async function runIntro(){
   await ms(50);
   await showPhrase(document.getElementById('line2'),1000);
   await ms(50);
-  await showPhrase(document.getElementById('line3'),1200);
+
+  // Trigger Option 2 animations before showing line3-wrap
+  var rings = document.getElementById('blueprint-rings');
+  var sweep = document.getElementById('laser-sweep');
+  var line3 = document.getElementById('line3');
+  if (rings) rings.classList.add('active');
+  if (sweep) sweep.classList.add('active');
+  if (line3) line3.classList.add('reveal-clip');
+
+  await showPhrase(document.getElementById('line3-wrap'),1200);
   await ms(100);
 
   var br=document.getElementById('brand-reveal');

@@ -46,9 +46,17 @@
 
     <div class="phrase-line" id="line1">Operations are complex</div>
     <div class="phrase-line" id="line2">Efficiencies are rare</div>
-    <div class="phrase-line" id="line3">
-      <span class="highlight">Intelligent Automation</span>
-      <span class="subtext">is the answer</span>
+    <div id="line3-wrap">
+      <div class="blueprint-rings" id="blueprint-rings">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+      </div>
+      <div class="phrase-line" id="line3">
+        <span class="blue-text">Intelligent Automation</span><br>
+        <span class="white-text">is the answer</span>
+      </div>
+      <div class="laser-sweep" id="laser-sweep"></div>
     </div>
 
     <div id="brand-reveal">
@@ -56,13 +64,13 @@
         <div id="brand-ring"></div>
         <div id="brand-ring2"></div>
         <div id="brand-mark-svg">
-          <img src="assets/images/text white (1).png" alt="IKOREX Mark" width="110" height="110">
+          <img src="assets/images/text white (1).png" alt="IKOREX Mark" width="310" height="310">
         </div>
       </div>
       <div id="brand-name-wrap">
         <!-- <div class="bn-name"><span class="logo-i">I</span><span class="logo-kor">KORE</span><span
-            class="logo-ex">X</span></div>
-        <div id="brand-consultancy">Intelligent Automation</div> -->
+            class="logo-ex">X</span></div> -->
+        <!-- <div id="brand-consultancy">Intelligent Automation</div> -->
         <div id="brand-city">Melbourne, Australia</div>
       </div>
       <div id="brand-hr"></div>
@@ -78,8 +86,8 @@
       </a>
       <ul class="nav-links">
         <li><a id="nhome" class="active" href="index.html">Home</a></li>
-        <li><a id="nsolutions" href="solutions.html">Solutions</a></li>
         <li><a id="nservices" href="services.html">Services</a></li>
+        <li><a id="nsolutions" href="solutions.html">Solutions</a></li>
         <li><a id="nabout" href="about.html">About</a></li>
         <li><a id="ncontact" href="contact.html">Contact</a></li>
       </ul>
@@ -148,14 +156,126 @@
 
       <div class="marquee-band">
         <div class="marquee-track">
-          <div class="mq-item">Robotic Process Automation</div>
-          <div class="mq-item">AI Computer Vision Monitoring</div>
-          <div class="mq-item">Order to Cash</div>
-          <div class="mq-item">Procure to Pay</div>
-          <div class="mq-item">Intelligent Finance & Accounting</div>
-          <div class="mq-item">Operational Optimization</div>
-          <div class="mq-item">Digital Transformation</div>
-          <div class="mq-item">Australian Compliance Architecture</div>
+          <div class="mq-card glow-card">
+            <div class="mq-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+              </svg>
+            </div>
+            <div class="mq-card-info">
+              <div class="mq-card-title">Robotic Process Automation</div>
+              <div class="mq-card-desc">Autonomous software bot execution.</div>
+            </div>
+          </div>
+
+          <div class="mq-card glow-card">
+            <div class="mq-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <div class="mq-card-info">
+              <div class="mq-card-title">AI Computer Vision Monitoring</div>
+              <div class="mq-card-desc">Real-time threat and gesture detection.</div>
+            </div>
+          </div>
+
+          <div class="mq-card glow-card">
+            <div class="mq-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                <line x1="1" y1="10" x2="23" y2="10" />
+              </svg>
+            </div>
+            <div class="mq-card-info">
+              <div class="mq-card-title">Order to Cash</div>
+              <div class="mq-card-desc">Seamless billing & ledger matching.</div>
+            </div>
+          </div>
+
+          <div class="mq-card glow-card">
+            <div class="mq-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+              </svg>
+            </div>
+            <div class="mq-card-info">
+              <div class="mq-card-title">Procure to Pay</div>
+              <div class="mq-card-desc">Automated vendor reconciliation.</div>
+            </div>
+          </div>
+
+          <div class="mq-card glow-card">
+            <div class="mq-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10" />
+                <line x1="12" y1="20" x2="12" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="14" />
+              </svg>
+            </div>
+            <div class="mq-card-info">
+              <div class="mq-card-title">Intelligent Finance & Accounting</div>
+              <div class="mq-card-desc">Continuous balance audits & analytics.</div>
+            </div>
+          </div>
+
+          <div class="mq-card glow-card">
+            <div class="mq-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+            </div>
+            <div class="mq-card-info">
+              <div class="mq-card-title">Operational Optimization</div>
+              <div class="mq-card-desc">Isolating and eliminating friction.</div>
+            </div>
+          </div>
+
+          <div class="mq-card glow-card">
+            <div class="mq-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <rect x="9" y="9" width="6" height="6" />
+                <line x1="9" y1="1" x2="9" y2="4" />
+                <line x1="15" y1="1" x2="15" y2="4" />
+                <line x1="9" y1="20" x2="9" y2="23" />
+                <line x1="15" y1="20" x2="15" y2="23" />
+                <line x1="20" y1="9" x2="23" y2="9" />
+                <line x1="20" y1="15" x2="23" y2="15" />
+                <line x1="1" y1="9" x2="4" y2="9" />
+                <line x1="1" y1="15" x2="4" y2="15" />
+              </svg>
+            </div>
+            <div class="mq-card-info">
+              <div class="mq-card-title">Digital Transformation</div>
+              <div class="mq-card-desc">Legacy stack migration and APIs.</div>
+            </div>
+          </div>
+
+          <div class="mq-card glow-card">
+            <div class="mq-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <div class="mq-card-info">
+              <div class="mq-card-title">Australian Compliance Architecture</div>
+              <div class="mq-card-desc">Sovereign data security & regulation.</div>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -266,38 +266,146 @@ svg.logo-gradient-defs {
   will-change: opacity, transform;
 }
 #line3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-#line3 .highlight {
-  background: var(--grad);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-style: normal;
   font-weight: 800;
-  font-style: italic;
-  letter-spacing: -0.03em;
-  padding: 4px 0;
-  animation: shiftingGlow 2s ease-in-out infinite alternate;
-}
-#line3 .subtext {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: clamp(11px, 2.5vw, 16px);
-  font-weight: 400;
-  color: var(--muted);
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  display: block;
+  opacity: 1 !important;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  width: 100% !important;
+  clip-path: inset(0 100% 0 0);
+  pointer-events: auto;
+  line-height: 1.15;
 }
 
-@keyframes shiftingGlow {
+#line3 .blue-text {
+  color: var(--blue);
+}
+
+#line3 .white-text {
+  color: #FFFFFF;
+}
+
+#line3-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Option 2: Laser Sweep & Blueprint Rings */
+.laser-sweep {
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  width: 3px;
+  background: linear-gradient(to bottom, transparent, var(--blue), var(--teal), transparent);
+  box-shadow: 0 0 10px var(--blue), 0 0 20px var(--teal);
+  opacity: 0;
+  pointer-events: none;
+  left: 0;
+}
+.laser-sweep.active {
+  animation: laserSweep 1.3s cubic-bezier(0.25, 1, 0.5, 1) 0.15s forwards;
+}
+
+@keyframes laserSweep {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+#line3.reveal-clip {
+  animation: clipReveal 1.3s cubic-bezier(0.25, 1, 0.5, 1) 0.15s forwards;
+}
+
+@keyframes clipReveal {
   from {
-    filter: drop-shadow(0 0 10px rgba(0, 136, 255, 0.2)) drop-shadow(0 0 25px rgba(0, 136, 255, 0.05));
+    clip-path: inset(0 100% 0 0);
   }
   to {
-    filter: drop-shadow(0 0 20px rgba(0, 136, 255, 0.5)) drop-shadow(0 0 40px rgba(0, 136, 255, 0.15));
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.blueprint-rings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.blueprint-rings.active {
+  opacity: 1;
+}
+.blueprint-rings .ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(0, 136, 255, 0.15);
+  transform: scale(0);
+  opacity: 0;
+}
+.blueprint-rings .ring-1 {
+  width: 200px;
+  height: 200px;
+  border-style: dotted;
+}
+.blueprint-rings .ring-2 {
+  width: 400px;
+  height: 400px;
+  border-color: rgba(0, 68, 255, 0.1);
+}
+.blueprint-rings .ring-3 {
+  width: 600px;
+  height: 600px;
+  border-style: dashed;
+}
+
+.blueprint-rings.active .ring-1 {
+  animation: ringGrow 2s cubic-bezier(0.1, 0.8, 0.2, 1) 0.1s forwards;
+}
+.blueprint-rings.active .ring-2 {
+  animation: ringGrow 2.3s cubic-bezier(0.1, 0.8, 0.2, 1) 0.2s forwards;
+}
+.blueprint-rings.active .ring-3 {
+  animation: ringGrow 2.6s cubic-bezier(0.1, 0.8, 0.2, 1) 0.3s forwards;
+}
+
+@keyframes ringGrow {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
   }
 }
 
@@ -864,7 +972,8 @@ body.light-theme .glow-card:hover::after {
 .team-card, 
 .contact-form, 
 .metric-card, 
-.priv-shield-box {
+.priv-shield-box,
+.mq-card {
   background: var(--card) !important;
   border: 1px solid var(--border) !important;
   border-radius: 18px !important;
@@ -881,8 +990,9 @@ body.light-theme .glow-card:hover::after {
 .svc-card:hover,
 .val-card:hover,
 .team-card:hover,
-.priv-shield-box:hover {
-  transform: scale(1.01) !important;
+.priv-shield-box:hover,
+.mq-card:hover {
+  transform: translateY(-2px) scale(1.01) !important;
   box-shadow: 0 0 30px var(--shadow-glow) !important;
   border-color: var(--border-glow) !important;
   background: var(--card-hover) !important;
@@ -968,7 +1078,7 @@ body.light-theme .glow-card:hover::after {
   background: var(--darker);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 20px 0;
+  padding: 32px 0;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -994,26 +1104,60 @@ body.light-theme .glow-card:hover::after {
 }
 .marquee-track {
   display: flex;
-  gap: 60px;
-  animation: marquee 25s linear infinite;
+  gap: 24px;
+  animation: marquee 35s linear infinite;
   white-space: nowrap;
   width: max-content;
-}
-.mq-item {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  color: var(--muted);
-  text-transform: uppercase;
-  display: flex;
   align-items: center;
 }
-.mq-item::after {
-  content: '•';
-  margin-left: 60px;
-  color: var(--border2);
-  font-size: 16px;
+.marquee-band:hover .marquee-track {
+  animation-play-state: paused;
+}
+.mq-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 22px !important;
+  min-width: 330px;
+  flex-shrink: 0;
+  cursor: pointer;
+  text-align: left;
+}
+.mq-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(0, 136, 255, 0.05) !important;
+  border: 1px solid rgba(0, 136, 255, 0.12) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.mq-card-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--blue);
+}
+.mq-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  white-space: normal;
+}
+.mq-card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 650;
+  color: var(--text);
+  line-height: 1.2;
+}
+.mq-card-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10.5px;
+  font-weight: 400;
+  color: var(--text2);
+  line-height: 1.35;
 }
 @keyframes marquee {
   0% { transform: translateX(0); }

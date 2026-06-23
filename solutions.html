@@ -1,153 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-<title>ikorex — Solutions Matrix</title>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>ikorex — Solutions Matrix</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="light-theme">
 
-<svg class="logo-gradient-defs" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="arrowGrad" x1="107" y1="110" x2="400" y2="167" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0F3BB0"/>
-      <stop offset="45%" stop-color="#1A6FBF"/>
-      <stop offset="80%" stop-color="#1BAE82"/>
-      <stop offset="100%" stop-color="#26D49C"/>
-    </linearGradient>
-  </defs>
-</svg>
+  <svg class="logo-gradient-defs" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="arrowGrad" x1="107" y1="110" x2="400" y2="167" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#0F3BB0" />
+        <stop offset="45%" stop-color="#1A6FBF" />
+        <stop offset="80%" stop-color="#1BAE82" />
+        <stop offset="100%" stop-color="#26D49C" />
+      </linearGradient>
+    </defs>
+  </svg>
 
-<div id="site" class="visible">
+  <div id="site" class="visible">
 
-  <nav>
-    <a class="nav-logo" href="index.html">
-      <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="header-logo-img">
-    </a>
-    <ul class="nav-links">
-      <li><a id="nhome" href="index.html">Home</a></li>
-      <li><a id="nsolutions" class="active" href="solutions.html">Solutions</a></li>
-      <li><a id="nservices" href="services.html">Services</a></li>
-      <li><a id="nabout" href="about.html">About</a></li>
-      <li><a id="ncontact" href="contact.html">Contact</a></li>
-    </ul>
-    <div style="display:flex; align-items:center; gap:12px;">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
-        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      </button>
-      <button class="btn-nav" onclick="location.href='contact.html'">Initiate Architecture</button>
-      <button class="menu-toggle" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="scroll-progress-container">
-      <div class="scroll-progress-bar"></div>
-    </div>
-  </nav>
+    <nav>
+      <a class="nav-logo" href="index.html">
+        <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="header-logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a id="nhome" href="index.html">Home</a></li>
+        <li><a id="nservices" href="services.html">Services</a></li>
+        <li><a id="nsolutions" class="active" href="solutions.html">Solutions</a></li>
 
-  <div class="page active" id="page-solutions">
-    <div class="page-hero">
-      <div class="eyebrow animate-hero-1" style="justify-content:center;">System Matrices</div>
-      <h1 class="page-hero-title animate-hero-2">Structural fixes for<br>your <em>highest transaction risks.</em></h1>
-      <p class="page-hero-sub animate-hero-3">Four mission-critical operational spaces. Transformed with high automation and real-time verification layers.</p>
-    </div>
-    
-    <div class="solutions-full">
-      <div class="sol-full-grid">
-        <div class="sol-full-card glow-card" data-sr="up">
-          <div>
-            <span class="tag-chip">Order to Cash · O2C</span>
-            <h3 class="sol-title">Accelerate cash velocity.<br><em>Maximize liquid control.</em></h3>
-            <p class="sol-body">Eliminate transaction friction starting at order processing down through bank collection loops to protect working capital balances, reduce DSO timelines, and settle billing disputes autonomously.</p>
-          </div>
-          <div>
-            <div class="sol-items">
-              <div class="sol-item"><div class="sol-tick"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Automated billing verification & secure electronic delivery loops</span></div>
-              <div class="sol-item"><div class="sol-tick"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Real-time invoice generation and multi-platform balance matching</span></div>
-              <div class="sol-item"><div class="sol-tick"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Automated reminder systems and escalation routing protocols</span></div>
+        <li><a id="nabout" href="about.html">About</a></li>
+        <li><a id="ncontact" href="contact.html">Contact</a></li>
+      </ul>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
+          <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="btn-nav" onclick="location.href='contact.html'">Initiate Architecture</button>
+        <button class="menu-toggle" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="scroll-progress-container">
+        <div class="scroll-progress-bar"></div>
+      </div>
+    </nav>
+
+    <div class="page active" id="page-solutions">
+      <div class="page-hero">
+        <div class="eyebrow animate-hero-1" style="justify-content:center;">System Matrices</div>
+        <h1 class="page-hero-title animate-hero-2">Structural fixes for<br>your <em>highest transaction risks.</em></h1>
+        <p class="page-hero-sub animate-hero-3">Four mission-critical operational spaces. Transformed with high
+          automation and real-time verification layers.</p>
+      </div>
+
+      <div class="solutions-full">
+        <div class="sol-full-grid">
+          <div class="sol-full-card glow-card" data-sr="up">
+            <div>
+              <span class="tag-chip">Order to Cash · O2C</span>
+              <h3 class="sol-title">Accelerate cash velocity.<br><em>Maximize liquid control.</em></h3>
+              <p class="sol-body">Eliminate transaction friction starting at order processing down through bank
+                collection loops to protect working capital balances, reduce DSO timelines, and settle billing disputes
+                autonomously.</p>
+            </div>
+            <div>
+              <div class="sol-items">
+                <div class="sol-item">
+                  <div class="sol-tick"><svg viewBox="0 0 12 12" fill="none">
+                      <polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg></div><span>Automated billing verification & secure electronic delivery loops</span>
+                </div>
+                <div class="sol-item">
+                  <div class="sol-tick"><svg viewBox="0 0 12 12" fill="none">
+                      <polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg></div><span>Real-time invoice generation and multi-platform balance matching</span>
+                </div>
+                <div class="sol-item">
+                  <div class="sol-tick"><svg viewBox="0 0 12 12" fill="none">
+                      <polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg></div><span>Automated reminder systems and escalation routing protocols</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="sol-full-card glow-card" data-sr="up" data-sr-delay="1">
-          <div>
-            <span class="tag-chip">Procure to Pay · P2P</span>
-            <h3 class="sol-title">Govern complex spend stacks.<br><em>Enforce vendor metrics.</em></h3>
-            <p class="sol-body">Manual payment steps lead to validation errors, compliance risks, and supplier strain. We build hands-free matching pipelines to give you real-time visibility and absolute budget control.</p>
-          </div>
-          <div>
-            <div class="sol-items">
-              <div class="sol-item"><div class="sol-tick"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Purchase requisition and PO approval distribution setups</span></div>
-              <div class="sol-item"><div class="sol-tick"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Automated 3-way record validation (PO, invoice, receiving log)</span></div>
-              <div class="sol-item"><div class="sol-tick"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Supplier ledger exception reporting and automated status dashboards</span></div>
+          <div class="sol-full-card glow-card" data-sr="up" data-sr-delay="1">
+            <div>
+              <span class="tag-chip">Procure to Pay · P2P</span>
+              <h3 class="sol-title">Govern complex spend stacks.<br><em>Enforce vendor metrics.</em></h3>
+              <p class="sol-body">Manual payment steps lead to validation errors, compliance risks, and supplier strain.
+                We build hands-free matching pipelines to give you real-time visibility and absolute budget control.</p>
+            </div>
+            <div>
+              <div class="sol-items">
+                <div class="sol-item">
+                  <div class="sol-tick"><svg viewBox="0 0 12 12" fill="none">
+                      <polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg></div><span>Purchase requisition and PO approval distribution setups</span>
+                </div>
+                <div class="sol-item">
+                  <div class="sol-tick"><svg viewBox="0 0 12 12" fill="none">
+                      <polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg></div><span>Automated 3-way record validation (PO, invoice, receiving log)</span>
+                </div>
+                <div class="sol-item">
+                  <div class="sol-tick"><svg viewBox="0 0 12 12" fill="none">
+                      <polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg></div><span>Supplier ledger exception reporting and automated status dashboards</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="sol-full-card glow-card" data-sr="up" data-sr-delay="2">
-          <div>
-            <span class="tag-chip">Loss Prevention · AI Vision</span>
-            <h3 class="sol-title">Protect physical assets.<br><em>Detect real-time gesture vectors.</em></h3>
-            <p class="sol-body">Physical assets require active protection loops. Using advanced AI-driven camera software, we turn standard surveillance systems into proactive real-time defenses against inventory shrinkage.</p>
-          </div>
-          <div>
-            <div class="sol-items">
-              <div class="sol-item"><div class="sol-tick"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Real-time in-aisle gesture classification (e.g., product concealment, bag stuffing)</span></div>
-              <div class="sol-item"><div class="sol-tick"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Instant mobile push alerts with video proof attached for on-floor teams</span></div>
-              <div class="sol-item"><div class="sol-tick"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>100% anonymous body-behavior modeling strictly preserving customer privacy</span></div>
+          <div class="sol-full-card glow-card" data-sr="up" data-sr-delay="2">
+            <div>
+              <span class="tag-chip">Loss Prevention · AI Vision</span>
+              <h3 class="sol-title">Protect physical assets.<br><em>Detect real-time gesture vectors.</em></h3>
+              <p class="sol-body">Physical assets require active protection loops. Using advanced AI-driven camera
+                software, we turn standard surveillance systems into proactive real-time defenses against inventory
+                shrinkage.</p>
+            </div>
+            <div>
+              <div class="sol-items">
+                <div class="sol-item">
+                  <div class="sol-tick"><svg viewBox="0 0 12 12" fill="none">
+                      <polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg></div><span>Real-time in-aisle gesture classification (e.g., product concealment, bag
+                    stuffing)</span>
+                </div>
+                <div class="sol-item">
+                  <div class="sol-tick"><svg viewBox="0 0 12 12" fill="none">
+                      <polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg></div><span>Instant mobile push alerts with video proof attached for on-floor teams</span>
+                </div>
+                <div class="sol-item">
+                  <div class="sol-tick"><svg viewBox="0 0 12 12" fill="none">
+                      <polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg></div><span>100% anonymous body-behavior modeling strictly preserving customer privacy</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="sol-full-card glow-card" data-sr="up" data-sr-delay="3">
-          <div>
-            <span class="tag-chip">Intelligent Finance & Accounting</span>
-            <h3 class="sol-title">Compress month-end closings.<br><em>Publish verified data.</em></h3>
-            <p class="sol-body">Eliminate manual ledger tracking. We route standard bookkeeping steps into autonomous verification pipelines to keep your compliance logs clear and accurate for audit reviews.</p>
-          </div>
-          <div>
-            <div class="sol-items">
-              <div class="sol-item"><div class="sol-tick"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Continuous bank feed balancing and cloud accounting application matching</span></div>
-              <div class="sol-item"><div class="sol-tick"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>AASB and IFRS compliance mapping with instant ledger validation loops</span></div>
-              <div class="sol-item"><div class="sol-tick"><svg viewBox="0 0 12 12" fill="none"><polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Real-time profit & loss, balance sheet, and live cash visibility generation</span></div>
+          <div class="sol-full-card glow-card" data-sr="up" data-sr-delay="3">
+            <div>
+              <span class="tag-chip">Intelligent Finance & Accounting</span>
+              <h3 class="sol-title">Compress month-end closings.<br><em>Publish verified data.</em></h3>
+              <p class="sol-body">Eliminate manual ledger tracking. We route standard bookkeeping steps into autonomous
+                verification pipelines to keep your compliance logs clear and accurate for audit reviews.</p>
+            </div>
+            <div>
+              <div class="sol-items">
+                <div class="sol-item">
+                  <div class="sol-tick"><svg viewBox="0 0 12 12" fill="none">
+                      <polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg></div><span>Continuous bank feed balancing and cloud accounting application matching</span>
+                </div>
+                <div class="sol-item">
+                  <div class="sol-tick"><svg viewBox="0 0 12 12" fill="none">
+                      <polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg></div><span>AASB and IFRS compliance mapping with instant ledger validation loops</span>
+                </div>
+                <div class="sol-item">
+                  <div class="sol-tick"><svg viewBox="0 0 12 12" fill="none">
+                      <polyline points="2,6.5 5,9.5 10,3" stroke="#1BAE82" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg></div><span>Real-time profit & loss, balance sheet, and live cash visibility generation</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="cta-wrap">
-      <h2 class="cta-t">Is manual data entry blocking your operational view?</h2>
-      <p class="cta-s">Connect with our systems architects. We will trace out your current core transaction paths and pinpoint your best automation targets.</p>
-      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-        <button class="btn-primary" onclick="location.href='contact.html'">Connect with an Architect</button>
-        <button class="btn-ghost" onclick="location.href='services.html'">View Service Stack</button>
+      <div class="cta-wrap">
+        <h2 class="cta-t">Is manual data entry blocking your operational view?</h2>
+        <p class="cta-s">Connect with our systems architects. We will trace out your current core transaction paths and
+          pinpoint your best automation targets.</p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <button class="btn-primary" onclick="location.href='contact.html'">Connect with an Architect</button>
+          <button class="btn-ghost" onclick="location.href='services.html'">View Service Stack</button>
+        </div>
       </div>
     </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="footer-logo-img">
+          <div class="footer-tag">Melbourne, Australia</div>
+        </div>
+        <ul class="footer-links">
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="footer-copy">
+          © 2026 ikorex Intelligent Automation · <a class="privacy-link" href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
   </div>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">
-        <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="footer-logo-img">
-        <div class="footer-tag">Melbourne, Australia</div>
-      </div>
-      <ul class="footer-links">
-        <li><a href="solutions.html">Solutions</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="footer-copy">
-        © 2026 ikorex Intelligent Automation · <a class="privacy-link" href="privacy.html">Privacy Policy</a>
-      </div>
-    </div>
-  </footer>
-</div>
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>
