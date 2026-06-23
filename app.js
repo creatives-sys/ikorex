@@ -50,18 +50,31 @@ async function runIntro(){
   document.getElementById('brand-cta').classList.add('show');
 }
 
-function launchSite(){
+function launchSite(immediate){
   if(DONE)return;DONE=true;
-  document.getElementById('intro').classList.add('out');
-  document.getElementById('site').classList.add('visible');
-  setTimeout(function(){
-    document.getElementById('intro').style.display='none';
+  localStorage.setItem('introSeen', 'true');
+  var intro = document.getElementById('intro');
+  var site = document.getElementById('site');
+  if (immediate) {
+    if(intro) intro.style.display='none';
+    if(site) site.classList.add('visible');
     if (localStorage.getItem('theme') === 'light') {
       document.body.classList.add('light-theme');
     } else {
       document.body.classList.remove('light-theme');
     }
-  },600);
+  } else {
+    if(intro) intro.classList.add('out');
+    if(site) site.classList.add('visible');
+    setTimeout(function(){
+      if(intro) intro.style.display='none';
+      if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light-theme');
+      } else {
+        document.body.classList.remove('light-theme');
+      }
+    },600);
+  }
 }
 
 function toggleTheme() {
@@ -108,7 +121,7 @@ function go(name){
   function observe(){document.querySelectorAll('[data-sr]:not(.sr-in)').forEach(function(el){io.observe(el);});}
   
   var _L=window.launchSite;
-  window.launchSite=function(){_L();setTimeout(observe,200);};
+  window.launchSite=function(immediate){_L(immediate);setTimeout(observe,200);};
   var _G=window.go;
   window.go=function(name){_G(name);setTimeout(observe,50);};
   document.addEventListener('DOMContentLoaded',function(){
@@ -157,7 +170,11 @@ window.addEventListener('scroll', function() {
 window.addEventListener('load',function(){
   var intro = document.getElementById('intro');
   if(intro) {
-    runIntro();
+    if (localStorage.getItem('introSeen') === 'true') {
+      launchSite(true);
+    } else {
+      runIntro();
+    }
   } else {
     if (localStorage.getItem('theme') === 'light') {
       document.body.classList.add('light-theme');

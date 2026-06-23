@@ -6,8 +6,18 @@
 <title>ikorex — Intelligent Automation & Operations</title>
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css">
+<script>
+  if (localStorage.getItem('introSeen') === 'true') {
+    document.documentElement.classList.add('skip-intro');
+  }
+</script>
 </head>
 <body>
+<script>
+  if (localStorage.getItem('introSeen') === 'true' && localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-theme');
+  }
+</script>
 
 <svg class="logo-gradient-defs" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -32,7 +42,10 @@
 
   <div class="phrase-line" id="line1">Operations are complex</div>
   <div class="phrase-line" id="line2">Efficiencies are rare</div>
-  <div class="phrase-line" id="line3">Intelligent Automation is the answer</div>
+  <div class="phrase-line" id="line3">
+    <span class="highlight">Intelligent Automation</span>
+    <span class="subtext">is the answer</span>
+  </div>
 
   <div id="brand-reveal">
     <div id="brand-mark-wrap">
