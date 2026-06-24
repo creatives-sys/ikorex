@@ -339,7 +339,7 @@ svg.logo-gradient-defs {
   left: 0;
 }
 .laser-sweep.active {
-  animation: laserSweep 1.3s cubic-bezier(0.25, 1, 0.5, 1) 0.15s forwards;
+  animation: laserSweep 2.2s cubic-bezier(0.25, 1, 0.5, 1) 0.2s forwards;
 }
 
 @keyframes laserSweep {
@@ -360,7 +360,7 @@ svg.logo-gradient-defs {
 }
 
 #line3.reveal-clip {
-  animation: clipReveal 1.3s cubic-bezier(0.25, 1, 0.5, 1) 0.15s forwards;
+  animation: clipReveal 2.2s cubic-bezier(0.25, 1, 0.5, 1) 0.2s forwards;
 }
 
 @keyframes clipReveal {
