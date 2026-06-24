@@ -9,19 +9,9 @@
     href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
-  <script>
-    if (localStorage.getItem('introSeen') === 'true') {
-      document.documentElement.classList.add('skip-intro');
-    }
-  </script>
 </head>
 
 <body>
-  <script>
-    if (localStorage.getItem('introSeen') === 'true' && localStorage.getItem('theme') === 'light') {
-      document.body.classList.add('light-theme');
-    }
-  </script>
 
   <svg class="logo-gradient-defs" xmlns="http://www.w3.org/2000/svg">
     <defs>
@@ -53,8 +43,14 @@
         <div class="ring ring-3"></div>
       </div>
       <div class="phrase-line" id="line3">
-        <span class="blue-text">Intelligent Automation</span><br>
-        <span class="white-text">is the answer</span>
+        <span class="white-text">INTELLIGENT</span><br>
+        <span class="blue-text">AUTOMATION</span><br>
+        <span class="answer-box">
+          <span class="bracket">[</span>
+          <span class="gray-text">IS THE</span>
+          <span class="green-text">ANSWER</span>
+          <span class="bracket">]</span>
+        </span>
       </div>
       <div class="laser-sweep" id="laser-sweep"></div>
     </div>
@@ -64,13 +60,13 @@
         <div id="brand-ring"></div>
         <div id="brand-ring2"></div>
         <div id="brand-mark-svg">
-          <img src="assets/images/text white (1).png" alt="IKOREX Mark" width="310" height="310">
+          <img src="assets/images/ikorex new changes-05.png" alt="IKOREX Mark" width="310" height="310">
         </div>
       </div>
       <div id="brand-name-wrap">
         <!-- <div class="bn-name"><span class="logo-i">I</span><span class="logo-kor">KORE</span><span
             class="logo-ex">X</span></div> -->
-        <!-- <div id="brand-consultancy">Intelligent Automation</div> -->
+        <div id="brand-consultancy">Intelligent Automation</div>
         <div id="brand-city">Melbourne, Australia</div>
       </div>
       <div id="brand-hr"></div>
@@ -82,7 +78,8 @@
 
     <nav>
       <a class="nav-logo" href="index.html">
-        <img src="assets/images/logo-horizontal.png" alt="IKOREX" class="header-logo-img">
+        <img src="assets/images/ikorex new changes-06.png" alt="IKOREX" class="header-logo-img"
+          style="width: 100px;height: 100px;">
       </a>
       <ul class="nav-links">
         <li><a id="nhome" class="active" href="index.html">Home</a></li>
@@ -359,7 +356,8 @@
               <div class="bento-overlay"></div>
               <div class="bento-content">
                 <div class="bento-icon-wrapper">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
                     <path d="M18 2v10M15 2v5c0 1.66 1.34 3 3 3s3-1.34 3-3V2M18 10v10" />
                     <path d="M6 2v18M6 2c2 0 4 2 4 6v4H6" />
                   </svg>
@@ -396,8 +394,9 @@
                 <p class="perf-footer-text">Built for extreme scale and mission-critical reliability.</p>
               </div>
               <div class="perf-bg-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                 </svg>
               </div>
             </div>

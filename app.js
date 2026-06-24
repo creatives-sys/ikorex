@@ -179,11 +179,7 @@ window.addEventListener('scroll', function() {
 window.addEventListener('load',function(){
   var intro = document.getElementById('intro');
   if(intro) {
-    if (localStorage.getItem('introSeen') === 'true') {
-      launchSite(true);
-    } else {
-      runIntro();
-    }
+    runIntro();
   } else {
     if (localStorage.getItem('theme') === 'light') {
       document.body.classList.add('light-theme');

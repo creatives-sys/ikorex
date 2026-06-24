@@ -266,7 +266,9 @@ svg.logo-gradient-defs {
   will-change: opacity, transform;
 }
 #line3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-style: normal;
+  font-size: clamp(18px, 5.2vw, 45px);
   font-weight: 800;
   opacity: 1 !important;
   position: relative !important;
@@ -276,7 +278,9 @@ svg.logo-gradient-defs {
   width: 100% !important;
   clip-path: inset(0 100% 0 0);
   pointer-events: auto;
-  line-height: 1.15;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 #line3 .blue-text {
@@ -285,6 +289,30 @@ svg.logo-gradient-defs {
 
 #line3 .white-text {
   color: #FFFFFF;
+}
+
+#line3 .answer-box {
+  display: block;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.38em;
+  letter-spacing: 0.12em;
+  margin-top: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+#line3 .answer-box .bracket {
+  color: #1A6FBF; /* Theme blue-teal */
+}
+
+#line3 .answer-box .gray-text {
+  color: #64748B; /* Muted theme gray */
+  margin: 0 4px;
+}
+
+#line3 .answer-box .green-text {
+  color: #26D49C; /* Neon mint-green */
+  font-weight: bold;
 }
 
 #line3-wrap {
