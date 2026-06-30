@@ -2832,3 +2832,340 @@ body.menu-open {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ==========================================================================
+   RPA SHOWCASE SECTION
+   ========================================================================== */
+.rpa-section {
+  padding: 120px 5%;
+  background-color: var(--dark);
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.4s ease;
+}
+
+.rpa-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rpa-header {
+  margin-bottom: 56px;
+}
+
+.rpa-eyebrow {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rpa-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  display: inline-block;
+  box-shadow: 0 0 8px var(--blue);
+}
+
+.rpa-content-layout {
+  display: grid;
+  grid-template-columns: 3.5fr 6.5fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Left Column Styling */
+.rpa-left-col {
+  position: sticky;
+  top: 120px;
+}
+
+.rpa-body-p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text2);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.rpa-highlight-blue {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.rpa-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.rpa-bullet-list li {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.4;
+}
+
+.rpa-check-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(0, 136, 255, 0.2);
+}
+
+.rpa-check-icon svg {
+  width: 10px;
+  height: 10px;
+}
+
+/* Right Column Cards Layout */
+.rpa-cards-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+}
+
+/* Standard Dark Card styling to match the visual reference exactly */
+.rpa-card {
+  background: #080C14;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  padding: 32px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.rpa-card-large {
+  grid-row: span 2;
+  padding: 40px;
+}
+
+.rpa-card:hover {
+  transform: translateY(-4px) scale(1.005);
+  border-color: rgba(0, 136, 255, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 136, 255, 0.12), 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Badge styled exactly to match the screenshot */
+.rpa-badge {
+  align-self: flex-start;
+  background-color: #0055ff;
+  color: #ffffff;
+  padding: 6px 10px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.rpa-card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.rpa-card-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #94A3B8;
+  margin-bottom: 24px;
+}
+
+.rpa-card-bullets {
+  list-style: none;
+  padding: 0;
+  margin: auto 0 0 0; /* push to bottom of the card content */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 24px;
+}
+
+.rpa-card-bullets li {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rpa-bullet-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Statistics Banner styling */
+.rpa-banner {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #0052FF 0%, #0033CC 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 32px 40px;
+  color: #FFFFFF;
+  box-shadow: 0 8px 32px rgba(0, 102, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.rpa-banner:hover {
+  transform: translateY(-2px) scale(1.002);
+  box-shadow: 0 12px 40px rgba(0, 102, 255, 0.25);
+}
+
+.rpa-banner-eyebrow {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.rpa-stats-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.rpa-stat-item {
+  flex: 1;
+}
+
+.rpa-stat-num {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: -0.02em;
+}
+
+.rpa-stat-arrow {
+  font-weight: 300;
+  opacity: 0.95;
+}
+
+.rpa-stat-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 8px;
+  line-height: 1.3;
+}
+
+.rpa-banner-footer {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.75);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 16px;
+  margin-top: 8px;
+}
+
+/* Responsive Overrides */
+@media (max-width: 991px) {
+  .rpa-content-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .rpa-left-col {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .rpa-section {
+    padding: 80px 5%;
+  }
+  
+  .rpa-cards-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+  }
+  
+  .rpa-card-large {
+    grid-row: auto;
+    padding: 32px;
+  }
+  
+  .rpa-banner {
+    grid-column: span 1;
+    padding: 32px;
+  }
+  
+  .rpa-stats-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rpa-section {
+    padding: 60px 5%;
+  }
+  
+  .rpa-card {
+    padding: 24px;
+  }
+  
+  .rpa-banner {
+    padding: 24px;
+  }
+  
+  .rpa-card-title {
+    font-size: 20px;
+  }
+}
