@@ -12,6 +12,16 @@
 </head>
 
 <body>
+  <script>
+    (function () {
+      var urlParams = new URLSearchParams(window.location.search);
+      var triggerIntro = urlParams.get('triggerIntro');
+      var introSeen = sessionStorage.getItem('introSeen');
+      if (introSeen && !triggerIntro) {
+        document.body.classList.add('skip-intro');
+      }
+    })();
+  </script>
 
   <svg class="logo-gradient-defs" xmlns="http://www.w3.org/2000/svg">
     <defs>
@@ -77,7 +87,7 @@
   <div id="site">
 
     <nav>
-      <a class="nav-logo" href="index.html">
+      <a class="nav-logo" href="index.html?triggerIntro=true">
         <img src="assets/images/Ikorex logo left aligned .png" alt="IKOREX" class="header-logo-img"
           style="width: 120px;height: 120px;">
       </a>
@@ -382,6 +392,102 @@
         </div>
       </section>
 
+      <!-- Modular AI Modules Section -->
+      <section class="modular-ai-new" id="modular-ai-section">
+        <div class="modular-ai-new-inner">
+          
+          <div class="modular-ai-new-header" data-sr="up">
+            <div class="modular-eyebrow">
+              <span class="modular-eyebrow-dot"></span>Modular AI Modules
+            </div>
+            <h2 class="modular-title">Intelligence at <span class="highlight-blue">every corner</span> of your operation.</h2>
+          </div>
+          
+          <div class="modular-grid-layout">
+            <!-- Left Column: 2x2 Grid of Cards -->
+            <div class="modular-left-col" data-sr="left">
+              <div class="modular-cards-grid">
+                
+                <!-- Card 1: Safety -->
+                <div class="modular-card glow-card">
+                  <span class="modular-badge">Safety</span>
+                  <h3 class="modular-card-title">PPE Detection</h3>
+                  <p class="modular-card-desc">AI-powered detection of missing safety gear in milliseconds.</p>
+                </div>
+                
+                <!-- Card 2: Hospitality -->
+                <div class="modular-card glow-card">
+                  <span class="modular-badge">Hospitality</span>
+                  <h3 class="modular-card-title">Hospitality Analytics</h3>
+                  <p class="modular-card-desc">Automated table tracking and hygiene compliance.</p>
+                </div>
+                
+                <!-- Card 3: Retail -->
+                <div class="modular-card glow-card">
+                  <span class="modular-badge">Retail</span>
+                  <h3 class="modular-card-title">Retail Intelligence</h3>
+                  <p class="modular-card-desc">Real-time checkout monitoring and staff presence alerts.</p>
+                </div>
+                
+                <!-- Card 4: Engineering Targets (Vibrant Blue Background) -->
+                <div class="modular-card special-blue-card">
+                  <div>
+                    <span class="special-badge">ENGINEERING TARGETS</span>
+                    <div class="special-stat-group">
+                      <div class="special-stat">
+                        <div class="special-stat-value">~0.1s</div>
+                        <div class="special-stat-label">INFERENCE SPEED</div>
+                      </div>
+                      <div class="special-stat">
+                        <div class="special-stat-value">High-accuracy</div>
+                        <div class="special-stat-label">DETECTION MODELS</div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="special-card-desc">Built for extreme scale and mission-critical reliability.</p>
+                </div>
+                
+              </div>
+            </div>
+            
+            <!-- Right Column: Text & Features List -->
+            <div class="modular-right-col" data-sr="right" data-sr-delay="1">
+              <p class="modular-desc-p">Computer vision and predictive AI watching the parts of your business that matter most — without adding headcount.</p>
+              
+              <p class="modular-highlight-p">Every module plugs into your existing operations. No hardware overhaul, no disruption — just intelligence layered on top of what you already run.</p>
+              
+              <ul class="modular-checklist">
+                <li>
+                  <span class="checklist-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </span>
+                  Real-time alerts, not end-of-day reports
+                </li>
+                <li>
+                  <span class="checklist-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </span>
+                  Deploys across sites in days, not months
+                </li>
+                <li>
+                  <span class="checklist-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </span>
+                  Built for high-stakes, regulated environments
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
       <div class="sav">
         <div class="sav-inner">
           <div data-sr="left">
@@ -430,86 +536,6 @@
           </div>
         </div>
       </div>
-
-      <div class="modular-ai">
-        <div class="modular-ai-inner">
-          <div class="modular-ai-header">
-            <div class="header-left" data-sr="up">
-              <div class="eyebrow">Modular AI Modules</div>
-              <h2 class="sec-title">Intelligence at <em>Every Corner</em></h2>
-              <p class="sec-body">Modular AI solutions designed for high-stakes environments.</p>
-            </div>
-            <div class="header-right" data-sr="up" data-sr-delay="1">
-              <a href="solutions.html" class="view-all-btn">View all modules <span class="arrow">→</span></a>
-            </div>
-          </div>
-
-          <div class="bento-grid">
-            <!-- Card 1: PPE Detection (Large - Span 2) -->
-            <div class="bento-card large-card ppe-card glow-card" data-sr="up">
-              <div class="bento-bg" style="background-image: url('assets/images/ppe-detection.png');"></div>
-              <div class="bento-overlay"></div>
-              <div class="bento-content">
-                <span class="badge-chip">Safety</span>
-                <h3 class="bento-title">PPE Detection</h3>
-                <p class="bento-desc">AI-powered detection of missing safety gear in milliseconds.</p>
-              </div>
-            </div>
-
-            <!-- Card 2: Hospitality Analytics (Small - Span 1) -->
-            <div class="bento-card small-card hospitality-card glow-card" data-sr="up" data-sr-delay="1">
-              <div class="bento-bg" style="background-image: url('assets/images/hospitality-analytics.png');"></div>
-              <div class="bento-overlay"></div>
-              <div class="bento-content">
-                <div class="bento-icon-wrapper">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <path d="M18 2v10M15 2v5c0 1.66 1.34 3 3 3s3-1.34 3-3V2M18 10v10" />
-                    <path d="M6 2v18M6 2c2 0 4 2 4 6v4H6" />
-                  </svg>
-                </div>
-                <h3 class="bento-title">Hospitality Analytics</h3>
-                <p class="bento-desc">Automated table tracking and hygiene compliance monitoring.</p>
-              </div>
-            </div>
-
-            <!-- Card 3: Retail Intelligence (Small - Span 1) -->
-            <div class="bento-card small-card retail-card glow-card" data-sr="up">
-              <div class="bento-bg" style="background-image: url('assets/images/retail-intelligence.png');"></div>
-              <div class="bento-overlay"></div>
-              <div class="bento-content">
-                <h3 class="bento-title">Retail Intelligence</h3>
-                <p class="bento-desc">Real-time checkout monitoring and staff presence alerts.</p>
-              </div>
-            </div>
-
-            <!-- Card 4: Performance (Large Gradient - Span 2) -->
-            <div class="bento-card large-card performance-card glow-card" data-sr="up" data-sr-delay="1">
-              <div class="performance-content">
-                <div class="perf-label">Performance</div>
-                <div class="perf-stats">
-                  <div class="perf-stat-item">
-                    <div class="perf-num">0.1s</div>
-                    <div class="perf-desc">Inference Speed</div>
-                  </div>
-                  <div class="perf-stat-item">
-                    <div class="perf-num">99.8%</div>
-                    <div class="perf-desc">Accuracy</div>
-                  </div>
-                </div>
-                <p class="perf-footer-text">Built for extreme scale and mission-critical reliability.</p>
-              </div>
-              <div class="perf-bg-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="priv-shield">
         <div class="priv-shield-inner">
           <div data-sr="left">

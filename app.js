@@ -63,7 +63,7 @@ async function runIntro() {
 
 function launchSite(immediate) {
   if (DONE) return; DONE = true;
-  localStorage.setItem('introSeen', 'true');
+  sessionStorage.setItem('introSeen', 'true');
   var intro = document.getElementById('intro');
   var site = document.getElementById('site');
   if (immediate) {
@@ -181,7 +181,16 @@ window.addEventListener('scroll', function () {
 window.addEventListener('load', function () {
   var intro = document.getElementById('intro');
   if (intro) {
-    runIntro();
+    if (document.body.classList.contains('skip-intro')) {
+      launchSite(true);
+    } else {
+      sessionStorage.setItem('introSeen', 'true');
+      if (window.history && window.history.replaceState) {
+        var cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+        window.history.replaceState({}, document.title, cleanUrl);
+      }
+      runIntro();
+    }
   } else {
     if (localStorage.getItem('theme') === 'light') {
       document.body.classList.add('light-theme');
