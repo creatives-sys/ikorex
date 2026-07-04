@@ -680,7 +680,8 @@ svg.logo-gradient-defs {
   font-family: 'Share Tech Mono', monospace;
   font-size: 12px;
   font-weight: 400;
-  color: var(--muted);
+  /* color: var(--muted); */
+  color: white;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-top: 6px;
@@ -2411,7 +2412,8 @@ footer {
 
 /* Base card styling (dark background, high contrast) */
 .modular-card {
-  background: #080C14; /* Solid dark obsidian background */
+  background: #080C14;
+  /* Solid dark obsidian background */
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 16px;
   padding: 32px;
@@ -2424,7 +2426,8 @@ footer {
 }
 
 body.light-theme .modular-card:not(.special-blue-card) {
-  background: #0A0E17; /* High contrast dark navy cards even in light theme */
+  background: #0A0E17;
+  /* High contrast dark navy cards even in light theme */
   border-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -2439,8 +2442,10 @@ body.light-theme .modular-card:not(.special-blue-card) {
   display: inline-block;
   align-self: flex-start;
   padding: 5px 12px;
-  background: var(--blue); /* Solid blue background */
-  color: #FFFFFF !important; /* White text */
+  background: var(--blue);
+  /* Solid blue background */
+  color: #FFFFFF !important;
+  /* White text */
   font-family: 'Share Tech Mono', monospace;
   font-size: 10px;
   font-weight: 600;
@@ -2455,7 +2460,8 @@ body.light-theme .modular-card:not(.special-blue-card) {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 22px;
   font-weight: 700;
-  color: #FFFFFF !important; /* White text */
+  color: #FFFFFF !important;
+  /* White text */
   margin-bottom: 12px;
   letter-spacing: -0.5px;
 }
@@ -2464,13 +2470,15 @@ body.light-theme .modular-card:not(.special-blue-card) {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 13.5px;
   font-weight: 400;
-  color: #94A3B8 !important; /* Muted tech gray secondary text */
+  color: #94A3B8 !important;
+  /* Muted tech gray secondary text */
   line-height: 1.5;
 }
 
 /* Special blue highlighted card */
 .modular-card.special-blue-card {
-  background: var(--grad); /* Electric blue to indigo gradient */
+  background: var(--grad);
+  /* Electric blue to indigo gradient */
   border: none;
   display: flex;
   flex-direction: column;
@@ -2581,7 +2589,8 @@ body.light-theme .modular-highlight-p {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: var(--blue); /* Solid blue circle */
+  background: var(--blue);
+  /* Solid blue circle */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2591,7 +2600,8 @@ body.light-theme .modular-highlight-p {
 .checklist-icon svg {
   width: 10px;
   height: 10px;
-  stroke: #FFFFFF; /* White checkmark */
+  stroke: #FFFFFF;
+  /* White checkmark */
 }
 
 /* ==========================================================================
@@ -3048,7 +3058,8 @@ body.menu-open {
 .rpa-card-bullets {
   list-style: none;
   padding: 0;
-  margin: auto 0 0 0; /* push to bottom of the card content */
+  margin: auto 0 0 0;
+  /* push to bottom of the card content */
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -3159,7 +3170,7 @@ body.menu-open {
     grid-template-columns: 1fr;
     gap: 48px;
   }
-  
+
   .rpa-left-col {
     position: static;
   }
@@ -3169,23 +3180,23 @@ body.menu-open {
   .rpa-section {
     padding: 80px 5%;
   }
-  
+
   .rpa-cards-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 16px;
   }
-  
+
   .rpa-card-large {
     grid-row: auto;
     padding: 32px;
   }
-  
+
   .rpa-banner {
     grid-column: span 1;
     padding: 32px;
   }
-  
+
   .rpa-stats-row {
     flex-direction: column;
     gap: 20px;
@@ -3196,16 +3207,500 @@ body.menu-open {
   .rpa-section {
     padding: 60px 5%;
   }
-  
+
   .rpa-card {
     padding: 24px;
   }
-  
+
   .rpa-banner {
     padding: 24px;
   }
-  
+
   .rpa-card-title {
     font-size: 20px;
+  }
+}
+
+/* ==========================================================================
+   FINANCE SHOWCASE SECTION
+   ========================================================================== */
+.finance-section {
+  padding: 120px 5%;
+  background-color: var(--dark);
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.4s ease;
+}
+
+.finance-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.finance-header {
+  margin-bottom: 56px;
+}
+
+.finance-eyebrow {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.finance-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  display: inline-block;
+  box-shadow: 0 0 8px var(--blue);
+}
+
+.finance-content-layout {
+  display: grid;
+  grid-template-columns: 3.5fr 6.5fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Left Column Styling */
+.finance-left-col {
+  position: sticky;
+  top: 120px;
+}
+
+.finance-body-p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text2);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.finance-highlight-blue {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.finance-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.finance-bullet-list li {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.4;
+}
+
+.finance-check-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(0, 136, 255, 0.2);
+}
+
+.finance-check-icon svg {
+  width: 10px;
+  height: 10px;
+}
+
+/* Right Column Cards Layout */
+.finance-cards-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+}
+
+.finance-card {
+  background: #080C14;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  padding: 32px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.finance-card-large {
+  grid-row: span 2;
+  padding: 40px;
+}
+
+.finance-card:hover {
+  transform: translateY(-4px) scale(1.005);
+  border-color: rgba(0, 136, 255, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 136, 255, 0.12), 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.finance-badge {
+  align-self: flex-start;
+  background-color: #0055ff;
+  color: #ffffff;
+  padding: 6px 10px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.finance-card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.finance-card-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #94A3B8;
+  margin-bottom: 24px;
+}
+
+/* Statistics Banner styling */
+.finance-banner {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #0052FF 0%, #0033CC 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 32px 40px;
+  color: #FFFFFF;
+  box-shadow: 0 8px 32px rgba(0, 102, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.finance-banner:hover {
+  transform: translateY(-2px) scale(1.002);
+  box-shadow: 0 12px 40px rgba(0, 102, 255, 0.25);
+}
+
+.finance-banner-eyebrow {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.finance-stats-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.finance-stat-item {
+  flex: 1;
+}
+
+.finance-stat-num {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: -0.02em;
+}
+
+.finance-stat-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 8px;
+  line-height: 1.3;
+}
+
+.finance-banner-footer {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.75);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 16px;
+  margin-top: 8px;
+}
+
+/* Responsive Overrides */
+@media (max-width: 991px) {
+  .finance-content-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .finance-left-col {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .finance-section {
+    padding: 80px 5%;
+  }
+
+  .finance-cards-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+  }
+
+  .finance-card-large {
+    grid-row: auto;
+    padding: 32px;
+  }
+
+  .finance-banner {
+    grid-column: span 1;
+    padding: 32px;
+  }
+
+  .finance-stats-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .finance-section {
+    padding: 60px 5%;
+  }
+
+  .finance-card {
+    padding: 24px;
+  }
+
+  .finance-banner {
+    padding: 24px;
+  }
+
+  .finance-card-title {
+    font-size: 20px;
+  }
+}
+
+/* ==========================================================================
+   AUDIT CTA SECTION (BANNER ABOVE FOOTER)
+   ========================================================================== */
+.audit-cta-section {
+  padding: 100px 5%;
+  background-color: var(--dark);
+  border-top: 1px solid var(--border);
+  transition: background-color 0.4s ease;
+}
+
+.audit-cta-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.audit-cta-card {
+  background: #080C14;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 56px 64px;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 48px;
+  align-items: center;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.audit-cta-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.audit-cta-eyebrow {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.audit-cta-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.audit-cta-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #94A3B8;
+}
+
+.audit-cta-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 320px;
+  justify-self: end;
+  position: relative;
+  z-index: 2;
+}
+
+.audit-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.audit-btn-primary {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #0055ff;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(0, 85, 255, 0.2);
+}
+
+.audit-btn-primary:hover {
+  background-color: #0044dd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 85, 255, 0.35);
+}
+
+.audit-btn-secondary {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 1px solid rgba(0, 85, 255, 0.4);
+  padding: 13px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.audit-btn-secondary:hover {
+  border-color: #0055ff;
+  background-color: rgba(0, 85, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.audit-cta-note {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  color: #64748B;
+  letter-spacing: 0.5px;
+}
+
+/* Light Theme Overrides */
+body.light-theme .audit-cta-card {
+  background: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .audit-cta-title {
+  color: #0F172A;
+}
+
+body.light-theme .audit-cta-desc {
+  color: #475569;
+}
+
+body.light-theme .audit-btn-secondary {
+  color: var(--blue);
+  border-color: rgba(0, 102, 204, 0.3);
+}
+
+body.light-theme .audit-btn-secondary:hover {
+  background-color: rgba(0, 102, 204, 0.04);
+  border-color: var(--blue);
+}
+
+/* Responsive Overrides */
+@media (max-width: 991px) {
+  .audit-cta-section {
+    padding: 60px 5%;
+  }
+
+  .audit-cta-card {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 48px;
+  }
+  
+  .audit-cta-right {
+    justify-self: start;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .audit-cta-card {
+    padding: 36px 24px;
   }
 }
