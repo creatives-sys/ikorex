@@ -1564,7 +1564,9 @@ body.light-theme .glow-card:hover::after {
 /* System Intelligence */
 .intel {
   padding: 120px 5%;
-  background: var(--dark);
+  background: var(--darker);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .intel-inner {
@@ -2437,6 +2439,30 @@ body.light-theme .modular-card:not(.special-blue-card) {
   box-shadow: 0 16px 36px var(--shadow-glow);
 }
 
+/* Card image wrapper and hover zoom effect */
+.modular-card-img-wrap {
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 2;
+}
+
+.modular-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.modular-card:hover .modular-card-img {
+  transform: scale(1.05);
+}
+
 /* Badge styling */
 .modular-badge {
   display: inline-block;
@@ -2451,7 +2477,7 @@ body.light-theme .modular-card:not(.special-blue-card) {
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 4px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   letter-spacing: 1px;
 }
 
@@ -3033,7 +3059,7 @@ body.menu-open {
   font-weight: 700;
   letter-spacing: 1px;
   border-radius: 4px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   text-transform: uppercase;
 }
 
@@ -3369,7 +3395,7 @@ body.menu-open {
   font-weight: 700;
   letter-spacing: 1px;
   border-radius: 4px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   text-transform: uppercase;
 }
 
@@ -3703,4 +3729,31 @@ body.light-theme .audit-btn-secondary:hover {
   .audit-cta-card {
     padding: 36px 24px;
   }
+}
+
+/* Card image styles for RPA and Finance sections */
+.rpa-card-img-wrap,
+.finance-card-img-wrap {
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 2;
+}
+
+.rpa-card-img,
+.finance-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.rpa-card:hover .rpa-card-img,
+.finance-card:hover .finance-card-img {
+  transform: scale(1.05);
 }
