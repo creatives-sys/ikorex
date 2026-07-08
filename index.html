@@ -291,20 +291,21 @@
         <div class="rpa-inner">
           <div class="rpa-header" data-sr="up">
             <div class="rpa-eyebrow">
-              <span class="rpa-eyebrow-dot"></span>Intelligent Process Automation
+              <span class="rpa-eyebrow-icon">.</span>intelligent process automation
             </div>
-            <h2 class="sec-title">Robotic Process Automation <em>(RPA) with AI</em>built for how business actually runs.
-            </h2>
+            <h2 class="sec-title">Robotic process automation <span class="rpa-title-blue">(RPA) with AI</span></h2>
           </div>
 
-          <div class="rpa-content-layout">
-            <div class="rpa-left-col" data-sr="left">
-              <p class="rpa-body-p">Manual order processing, invoice chasing, and approval bottlenecks don't scale with
-                your business — they slow it down.</p>
-              <p class="rpa-body-p"><strong class="rpa-highlight-blue">RPA with AI removes the bottleneck
-                  entirely.</strong> Bots handle the repetitive work, judgment-based exceptions get routed
-                intelligently, and your team only sees what actually needs a human.</p>
-
+          <!-- Intro layout: Paragraph on left, checklist on right -->
+          <div class="rpa-intro-row" data-sr="up">
+            <div class="rpa-intro-left">
+              <p class="rpa-body-p">
+                Manual order processing, invoice chasing, and approval bottlenecks don't scale with your business, they
+                slow it down. RPA with AI removes the bottleneck entirely: bots handle the repetitive work,
+                judgment-based exceptions get routed intelligently, and your team only sees what actually needs a human.
+              </p>
+            </div>
+            <div class="rpa-intro-right">
               <ul class="rpa-bullet-list">
                 <li>
                   <span class="rpa-check-icon">
@@ -335,69 +336,82 @@
                 </li>
               </ul>
             </div>
+          </div>
 
-            <div class="rpa-right-col" data-sr="right" data-sr-delay="1">
-              <div class="rpa-cards-grid">
-                <!-- Card 1 (Large): Quote to Cash -->
-                <div class="rpa-card rpa-card-large glow-card">
-                  <div class="rpa-card-img-wrap">
-                    <img src="assets/images/quote-to-cash.png" alt="Quote to Cash" class="rpa-card-img">
-                  </div>
-                  <div class="rpa-badge">ORDER-TO-CASH (O2C)</div>
-                  <h3 class="rpa-card-title">Quote to Cash, Fully Automated</h3>
-                  <p class="rpa-card-desc">From order capture through to invoicing, collections, and reconciliation —
-                    every step runs without manual handling.</p>
-                  <ul class="rpa-card-bullets">
-                    <li><span class="rpa-bullet-dot"></span>Order validation & credit checks</li>
-                    <li><span class="rpa-bullet-dot"></span>Automated invoicing & dispatch</li>
-                    <li><span class="rpa-bullet-dot"></span>Collections, dunning & cash application</li>
-                  </ul>
-                </div>
-
-                <!-- Card 2 (Small): Procure to Pay -->
-                <div class="rpa-card rpa-card-small glow-card">
-                  <div class="rpa-card-img-wrap">
-                    <img src="assets/images/purchase-to-payment.png" alt="Procure to Pay" class="rpa-card-img">
-                  </div>
-                  <div class="rpa-badge">PROCURE-TO-PAY (P2P)</div>
-                  <h3 class="rpa-card-title">Purchase to Payment, Streamlined</h3>
-                  <p class="rpa-card-desc">PO creation, 3-way matching, approvals, and supplier payments — orchestrated
-                    end to end with anomaly detection built in.</p>
-                </div>
-
-                <!-- Card 3 (Small): WhatsApp Automation -->
-                <div class="rpa-card rpa-card-small glow-card">
-                  <div class="rpa-card-img-wrap">
-                    <img src="assets/images/whatsapp-automation.png" alt="WhatsApp Automation" class="rpa-card-img">
-                  </div>
-                  <div class="rpa-badge">CONVERSATIONAL AI</div>
-                  <h3 class="rpa-card-title">WhatsApp Automation</h3>
-                  <p class="rpa-card-desc">Approvals and queries handled where your team already works.</p>
-                </div>
-
-                <!-- Banner: What engagements typically target -->
-                <div class="rpa-banner glow-card">
-                  <div class="rpa-banner-eyebrow">WHAT ENGAGEMENTS TYPICALLY TARGET</div>
-                  <div class="rpa-stats-row">
-                    <div class="rpa-stat-item">
-                      <div class="rpa-stat-num"><span class="rpa-stat-arrow">↓</span> 50-70%</div>
-                      <div class="rpa-stat-label">PROCESS COST REDUCTION</div>
-                    </div>
-                    <div class="rpa-stat-item">
-                      <div class="rpa-stat-num"><span class="rpa-stat-arrow">↓</span> 80-90%</div>
-                      <div class="rpa-stat-label">WORKFLOW ERROR REDUCTION</div>
-                    </div>
-                    <div class="rpa-stat-item">
-                      <div class="rpa-stat-num">24/7</div>
-                      <div class="rpa-stat-label">AUTONOMOUS UPTIME</div>
-                    </div>
-                  </div>
-                  <p class="rpa-banner-footer">Outcomes vary by process complexity and current baseline — scoped during
-                    discovery.</p>
-                </div>
+          <div class="rpa-cards-grid" data-sr="up">
+            <!-- Card 1: Quote to Cash -->
+            <div class="rpa-card glow-card">
+              <div class="rpa-card-img-wrap">
+                <img src="assets/images/quote-to-cash.png" alt="Quote to Cash" class="rpa-card-img">
               </div>
+              <div class="rpa-card-media-label">dashboard / workflow visual</div>
+              <div class="rpa-badge">order-to-cash</div>
+              <h3 class="rpa-card-title">Quote to cash, fully automated</h3>
+              <p class="rpa-card-desc">From order capture through to invoicing, collections, and reconciliation, every
+                step runs without manual handling.</p>
+              <ul class="rpa-card-bullets">
+                <li>Order validation and credit checks</li>
+                <li>Automated invoicing and dispatch</li>
+                <li>Collections, dunning and cash application</li>
+              </ul>
+            </div>
+
+            <!-- Card 2: Procure to Pay -->
+            <div class="rpa-card glow-card">
+              <div class="rpa-card-img-wrap">
+                <img src="assets/images/purchase-to-payment.png" alt="Procure to Pay" class="rpa-card-img">
+              </div>
+              <div class="rpa-card-media-label">dashboard / workflow visual</div>
+              <div class="rpa-badge">procure-to-pay</div>
+              <h3 class="rpa-card-title">Purchase to payment, streamlined</h3>
+              <p class="rpa-card-desc">PO creation, 3-way matching, approvals, and supplier payments, orchestrated end
+                to end with anomaly detection built in.</p>
+              <ul class="rpa-card-bullets">
+                <li>PO creation and 3-way matching</li>
+                <li>Approval routing and escalation</li>
+                <li>Anomaly detection on supplier payments</li>
+              </ul>
+            </div>
+
+            <!-- Card 3: WhatsApp Automation -->
+            <div class="rpa-card glow-card">
+              <div class="rpa-card-img-wrap">
+                <img src="assets/images/whatsapp-automation.png" alt="WhatsApp Automation" class="rpa-card-img">
+              </div>
+              <div class="rpa-card-media-label">phone / chat visual</div>
+              <div class="rpa-badge">conversational ai</div>
+              <h3 class="rpa-card-title">WhatsApp automation</h3>
+              <p class="rpa-card-desc">Approvals and queries handled where your team already works, no new tool for
+                people to learn or forget.</p>
+              <ul class="rpa-card-bullets">
+                <li>Approvals sent and actioned in chat</li>
+                <li>Natural-language status queries</li>
+                <li>Instant escalation to a human when needed</li>
+              </ul>
             </div>
           </div>
+
+          <!-- Banner: What engagements typically target -->
+          <div class="rpa-banner glow-card" data-sr="up">
+            <div class="rpa-banner-eyebrow">what engagements typically target</div>
+            <div class="rpa-stats-row">
+              <div class="rpa-stat-item">
+                <div class="rpa-stat-num"><span class="rpa-stat-arrow">↓</span>50-70%</div>
+                <div class="rpa-stat-label">process cost reduction</div>
+              </div>
+              <div class="rpa-stat-item">
+                <div class="rpa-stat-num"><span class="rpa-stat-arrow">↓</span>80-90%</div>
+                <div class="rpa-stat-label">workflow error reduction</div>
+              </div>
+              <div class="rpa-stat-item">
+                <div class="rpa-stat-num">24/7</div>
+                <div class="rpa-stat-label">autonomous uptime</div>
+              </div>
+            </div>
+            <p class="rpa-banner-footer">Outcomes vary by process complexity and current baseline, scoped during
+              discovery.</p>
+          </div>
+
         </div>
       </section>
 
