@@ -327,10 +327,10 @@ svg.logo-gradient-defs {
   opacity: 1 !important;
   position: relative !important;
   top: auto !important;
-  left: auto !important;
-  transform: none !important;
-  width: 100% !important;
-  clip-path: inset(0 100% 0 0);
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 120% !important;
+  clip-path: inset(0 100% -200px 0);
   pointer-events: auto;
   line-height: 1.1;
   letter-spacing: 0.04em;
@@ -433,11 +433,11 @@ svg.logo-gradient-defs {
 
 @keyframes clipReveal {
   from {
-    clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 100% -200px 0);
   }
 
   to {
-    clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 -200px 0);
   }
 }
 
@@ -3234,7 +3234,7 @@ body.light-theme .rpa-card-bullets li {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  
+
   .rpa-cards-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -3593,7 +3593,7 @@ body.light-theme .finance-card-bullets li {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  
+
   .finance-cards-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -3805,7 +3805,7 @@ body.light-theme .audit-btn-secondary:hover {
     gap: 36px;
     padding: 48px;
   }
-  
+
   .audit-cta-right {
     justify-self: start;
     max-width: 100%;
