@@ -350,9 +350,14 @@ svg.logo-gradient-defs {
   font-family: 'Share Tech Mono', monospace;
   font-size: 16px !important;
   letter-spacing: 0.12em;
-  margin-top: 16px;
   font-weight: normal;
   text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  top: 100%;
+  margin-top: 16px;
 }
 
 #line3 .answer-box .bracket {
@@ -3104,14 +3109,54 @@ body.menu-open {
   line-height: 1.45;
 }
 
-/* Statistics Banner styling */
+/* Force dark/black cards in light theme to match template design */
+body.light-theme .rpa-card {
+  background: #0A0E17 !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+}
+
+body.light-theme .rpa-card:hover {
+  border-color: rgba(0, 136, 255, 0.35) !important;
+  box-shadow: 0 12px 30px rgba(0, 136, 255, 0.12), 0 8px 32px rgba(0, 0, 0, 0.25) !important;
+}
+
+body.light-theme .rpa-card-title {
+  color: #FFFFFF !important;
+}
+
+body.light-theme .rpa-card-desc {
+  color: #94A3B8 !important;
+}
+
+body.light-theme .rpa-card-media-label {
+  color: #94A3B8 !important;
+  opacity: 0.6;
+}
+
+body.light-theme .rpa-card .rpa-badge {
+  color: #0088FF !important;
+  background-color: rgba(0, 136, 255, 0.1) !important;
+  border-color: rgba(0, 136, 255, 0.2) !important;
+}
+
+body.light-theme .rpa-card-bullets {
+  border-top-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.light-theme .rpa-card-bullets li {
+  color: #94A3B8 !important;
+}
+
+
+/* Statistics Banner styling (Vibrant Blue Background) */
 .rpa-banner {
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: var(--grad);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 18px;
   padding: 36px 40px;
-  color: var(--text);
-  box-shadow: var(--shadow-apple);
+  color: #FFFFFF !important;
+  box-shadow: 0 8px 32px rgba(0, 136, 255, 0.15), var(--shadow-apple);
   display: flex;
   flex-direction: column;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
@@ -3119,8 +3164,8 @@ body.menu-open {
 
 .rpa-banner:hover {
   transform: translateY(-2px) scale(1.002);
-  border-color: var(--border-glow);
-  box-shadow: 0 12px 30px var(--shadow-glow), var(--shadow-apple);
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 16px 36px rgba(0, 136, 255, 0.35), var(--shadow-apple) !important;
 }
 
 .rpa-banner-eyebrow {
@@ -3128,8 +3173,8 @@ body.menu-open {
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 2px;
-  color: var(--text2);
-  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.9) !important;
+  opacity: 0.95;
   margin-bottom: 24px;
   text-transform: lowercase;
 }
@@ -3150,7 +3195,7 @@ body.menu-open {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(28px, 3.5vw, 40px);
   font-weight: 800;
-  color: var(--text);
+  color: #FFFFFF !important;
   line-height: 1.1;
   display: flex;
   align-items: center;
@@ -3160,14 +3205,14 @@ body.menu-open {
 
 .rpa-stat-arrow {
   font-weight: 400;
-  color: var(--blue);
+  color: #FFFFFF !important;
 }
 
 .rpa-stat-label {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: var(--text2);
+  color: rgba(255, 255, 255, 0.85) !important;
   margin-top: 8px;
   line-height: 1.4;
   text-transform: lowercase;
@@ -3177,8 +3222,8 @@ body.menu-open {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 12.5px;
   line-height: 1.5;
-  color: var(--text2);
-  border-top: 1px solid var(--border);
+  color: rgba(255, 255, 255, 0.8) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: 20px;
   margin-top: 8px;
 }
@@ -3272,17 +3317,13 @@ body.menu-open {
   box-shadow: 0 0 8px var(--blue);
 }
 
-.finance-content-layout {
+/* Intro Row layout: Text on left, checklist on right */
+.finance-intro-row {
   display: grid;
-  grid-template-columns: 3.5fr 6.5fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 64px;
   align-items: start;
-}
-
-/* Left Column Styling */
-.finance-left-col {
-  position: sticky;
-  top: 120px;
+  margin-bottom: 56px;
 }
 
 .finance-body-p {
@@ -3294,6 +3335,10 @@ body.menu-open {
   margin-bottom: 24px;
 }
 
+.finance-body-p:last-of-type {
+  margin-bottom: 0;
+}
+
 .finance-highlight-blue {
   color: var(--blue);
   font-weight: 600;
@@ -3302,7 +3347,7 @@ body.menu-open {
 .finance-bullet-list {
   list-style: none;
   padding: 0;
-  margin: 32px 0 0 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -3320,74 +3365,83 @@ body.menu-open {
 }
 
 .finance-check-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: var(--blue);
-  color: #FFFFFF;
-  display: flex;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--blue);
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 0 10px rgba(0, 136, 255, 0.2);
+  box-shadow: none;
+  margin-top: 2px;
 }
 
 .finance-check-icon svg {
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
 }
 
-/* Right Column Cards Layout */
+/* Three Columns Cards Grid */
 .finance-cards-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  grid-template-rows: auto auto auto;
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
 }
 
+/* Standard theme-aware glass card styling */
 .finance-card {
-  background: #080C14;
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 18px;
   padding: 32px;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-apple);
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.finance-card-large {
-  grid-row: span 2;
-  padding: 40px;
-}
-
 .finance-card:hover {
   transform: translateY(-4px) scale(1.005);
-  border-color: rgba(0, 136, 255, 0.35);
-  box-shadow: 0 12px 30px rgba(0, 136, 255, 0.12), 0 8px 32px rgba(0, 0, 0, 0.25);
+  border-color: var(--border-glow);
+  box-shadow: 0 12px 30px var(--shadow-glow), var(--shadow-apple);
 }
 
+.finance-card-media-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text2);
+  opacity: 0.6;
+  margin-bottom: 12px;
+  text-transform: lowercase;
+}
+
+/* Pill badge style */
 .finance-badge {
   align-self: flex-start;
-  background-color: #0055ff;
-  color: #ffffff;
-  padding: 6px 10px;
+  background-color: rgba(0, 136, 255, 0.08);
+  color: var(--blue);
+  padding: 6px 12px;
   font-family: 'Share Tech Mono', monospace;
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 1px;
-  border-radius: 4px;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
   margin-bottom: 16px;
-  text-transform: uppercase;
+  text-transform: lowercase;
+  border: 1px solid rgba(0, 136, 255, 0.12);
 }
 
 .finance-card-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
-  color: #FFFFFF;
-  line-height: 1.25;
+  color: var(--text);
+  line-height: 1.3;
   margin-bottom: 16px;
   letter-spacing: -0.02em;
 }
@@ -3396,19 +3450,77 @@ body.menu-open {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 14px;
   line-height: 1.6;
-  color: #94A3B8;
+  color: var(--text2);
   margin-bottom: 24px;
 }
 
-/* Statistics Banner styling */
+.finance-card-bullets {
+  list-style: none;
+  padding: 0;
+  margin: auto 0 0 0;
+  /* push to bottom of the card content */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}
+
+.finance-card-bullets li {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text2);
+  line-height: 1.45;
+}
+
+/* Force dark/black cards in light theme to match template design */
+body.light-theme .finance-card {
+  background: #0A0E17 !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+}
+
+body.light-theme .finance-card:hover {
+  border-color: rgba(0, 136, 255, 0.35) !important;
+  box-shadow: 0 12px 30px rgba(0, 136, 255, 0.12), 0 8px 32px rgba(0, 0, 0, 0.25) !important;
+}
+
+body.light-theme .finance-card-title {
+  color: #FFFFFF !important;
+}
+
+body.light-theme .finance-card-desc {
+  color: #94A3B8 !important;
+}
+
+body.light-theme .finance-card-media-label {
+  color: #94A3B8 !important;
+  opacity: 0.6;
+}
+
+body.light-theme .finance-card .finance-badge {
+  color: #0088FF !important;
+  background-color: rgba(0, 136, 255, 0.1) !important;
+  border-color: rgba(0, 136, 255, 0.2) !important;
+}
+
+body.light-theme .finance-card-bullets {
+  border-top-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.light-theme .finance-card-bullets li {
+  color: #94A3B8 !important;
+}
+
+/* Statistics Banner styling (Vibrant Blue Background) */
 .finance-banner {
-  grid-column: span 2;
-  background: linear-gradient(135deg, #0052FF 0%, #0033CC 100%);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--grad);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 18px;
-  padding: 32px 40px;
-  color: #FFFFFF;
-  box-shadow: 0 8px 32px rgba(0, 102, 255, 0.15);
+  padding: 36px 40px;
+  color: #FFFFFF !important;
+  box-shadow: 0 8px 32px rgba(0, 136, 255, 0.15), var(--shadow-apple);
   display: flex;
   flex-direction: column;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
@@ -3416,7 +3528,8 @@ body.menu-open {
 
 .finance-banner:hover {
   transform: translateY(-2px) scale(1.002);
-  box-shadow: 0 12px 40px rgba(0, 102, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 16px 36px rgba(0, 136, 255, 0.35), var(--shadow-apple) !important;
 }
 
 .finance-banner-eyebrow {
@@ -3424,9 +3537,10 @@ body.menu-open {
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9) !important;
+  opacity: 0.95;
   margin-bottom: 24px;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 .finance-stats-row {
@@ -3443,9 +3557,9 @@ body.menu-open {
 
 .finance-stat-num {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(26px, 3vw, 36px);
+  font-size: clamp(28px, 3.5vw, 40px);
   font-weight: 800;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   line-height: 1.1;
   display: flex;
   align-items: center;
@@ -3454,34 +3568,35 @@ body.menu-open {
 }
 
 .finance-stat-label {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85) !important;
   margin-top: 8px;
-  line-height: 1.3;
+  line-height: 1.4;
+  text-transform: lowercase;
 }
 
 .finance-banner-footer {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 12px;
+  font-size: 12.5px;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.8) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-top: 16px;
+  padding-top: 20px;
   margin-top: 8px;
 }
 
 /* Responsive Overrides */
 @media (max-width: 991px) {
-  .finance-content-layout {
+  .finance-intro-row {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 32px;
   }
-
-  .finance-left-col {
-    position: static;
+  
+  .finance-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 
@@ -3492,18 +3607,7 @@ body.menu-open {
 
   .finance-cards-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
     gap: 16px;
-  }
-
-  .finance-card-large {
-    grid-row: auto;
-    padding: 32px;
-  }
-
-  .finance-banner {
-    grid-column: span 1;
-    padding: 32px;
   }
 
   .finance-stats-row {

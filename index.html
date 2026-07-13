@@ -532,20 +532,22 @@
         <div class="finance-inner">
           <div class="finance-header" data-sr="up">
             <div class="finance-eyebrow">
-              <span class="finance-eyebrow-dot"></span>Intelligent Finance & Accounting
+              <span class="finance-eyebrow-dot"></span>intelligent finance & accounting
             </div>
-            <h2 class="sec-title">Your finance team, <em>running on certainty</em> — not spreadsheets.</h2>
+            <h2 class="sec-title">Your finance team, <em>running on certainty</em> — <span class="rpa-title-blue">not
+                spreadsheets</span>.</h2>
           </div>
 
-          <div class="finance-content-layout">
-            <div class="finance-left-col" data-sr="left">
+          <!-- Intro layout: Paragraph on left, checklist on right -->
+          <div class="finance-intro-row" data-sr="up">
+            <div class="finance-intro-left">
               <p class="finance-body-p">Month-end shouldn't feel like a fire drill. Reconciliations, variance reports,
                 and director packages eat days your finance team doesn't have.</p>
-
               <p class="finance-body-p"><strong class="finance-highlight-blue">AI and RPA close the books for
                   you.</strong> Transactions reconcile themselves, variances surface in real time, and your CFO gets
                 board-ready numbers without the manual chase.</p>
-
+            </div>
+            <div class="finance-intro-right">
               <ul class="finance-bullet-list">
                 <li>
                   <span class="finance-check-icon">
@@ -576,63 +578,80 @@
                 </li>
               </ul>
             </div>
+          </div>
 
-            <div class="finance-right-col" data-sr="right" data-sr-delay="1">
-              <div class="finance-cards-grid">
-
-                <!-- Card 1 (Large): Reconciliation -->
-                <div class="finance-card finance-card-large glow-card">
-                  <div class="finance-card-img-wrap">
-                    <img src="assets/images/reconciliation.png" alt="Reconciliation" class="finance-card-img">
-                  </div>
-                  <div class="finance-badge">RECONCILIATION</div>
-                  <h3 class="finance-card-title">Sales, Procurement & Credit Card Reconciliation</h3>
-                  <p class="finance-card-desc">Every transaction matched and verified automatically — no manual
-                    line-by-line review.</p>
-                </div>
-
-                <!-- Card 2 (Small): Migration -->
-                <div class="finance-card finance-card-small glow-card">
-                  <div class="finance-card-img-wrap">
-                    <img src="assets/images/migration-setup.png" alt="Migration Setup" class="finance-card-img">
-                  </div>
-                  <div class="finance-badge">MIGRATION</div>
-                  <h3 class="finance-card-title">Xero, MYOB & QuickBooks Setup</h3>
-                  <p class="finance-card-desc">Clean migrations and tech setup, done right the first time.</p>
-                </div>
-
-                <!-- Card 3 (Small): Budgeting -->
-                <div class="finance-card finance-card-small glow-card">
-                  <div class="finance-card-img-wrap">
-                    <img src="assets/images/budget-variance.png" alt="Budget Variance" class="finance-card-img">
-                  </div>
-                  <div class="finance-badge">BUDGETING</div>
-                  <h3 class="finance-card-title">Live Budget vs. Actual Engines</h3>
-                  <p class="finance-card-desc">Variance flagged the moment it happens — not at month-end.</p>
-                </div>
-
-                <!-- Banner: What engagements typically target -->
-                <div class="finance-banner glow-card">
-                  <div class="finance-banner-eyebrow">WHAT ENGAGEMENTS TYPICALLY TARGET</div>
-                  <div class="finance-stats-row">
-                    <div class="finance-stat-item">
-                      <div class="finance-stat-num">Faster</div>
-                      <div class="finance-stat-label">MONTH-END CLOSE</div>
-                    </div>
-                    <div class="finance-stat-item">
-                      <div class="finance-stat-num">Near-zero</div>
-                      <div class="finance-stat-label">MANUAL RECONCILIATION EFFORT</div>
-                    </div>
-                    <div class="finance-stat-item">
-                      <div class="finance-stat-num">Live</div>
-                      <div class="finance-stat-label">BUDGET-TO-ACTUAL VISIBILITY</div>
-                    </div>
-                  </div>
-                  <p class="finance-banner-footer">Board-ready numbers throughout the month — not just at close.</p>
-                </div>
+          <div class="finance-cards-grid" data-sr="up">
+            <!-- Card 1: Reconciliation -->
+            <div class="finance-card glow-card">
+              <div class="finance-card-img-wrap">
+                <img src="assets/images/reconciliation.png" alt="Reconciliation" class="finance-card-img">
               </div>
+              <div class="finance-card-media-label">dashboard / ledger visual</div>
+              <div class="finance-badge">reconciliation</div>
+              <h3 class="finance-card-title">Sales, Procurement & Credit Card Reconciliation</h3>
+              <p class="finance-card-desc">Every transaction matched and verified automatically — no manual line-by-line
+                review.</p>
+              <ul class="finance-card-bullets">
+                <li>Automatic bank feed matching</li>
+                <li>Exception and anomaly resolution</li>
+                <li>System-wide general ledger sync</li>
+              </ul>
+            </div>
+
+            <!-- Card 2: Migration -->
+            <div class="finance-card glow-card">
+              <div class="finance-card-img-wrap">
+                <img src="assets/images/migration-setup.png" alt="Migration Setup" class="finance-card-img">
+              </div>
+              <div class="finance-card-media-label">migration / setup visual</div>
+              <div class="finance-badge">migration</div>
+              <h3 class="finance-card-title">Xero, MYOB & QuickBooks Setup</h3>
+              <p class="finance-card-desc">Clean migrations and tech setup, done right the first time.</p>
+              <ul class="finance-card-bullets">
+                <li>Historical ledger migration</li>
+                <li>Chart of accounts design</li>
+                <li>Custom API integrations and syncing</li>
+              </ul>
+            </div>
+
+            <!-- Card 3: Budgeting -->
+            <div class="finance-card glow-card">
+              <div class="finance-card-img-wrap">
+                <img src="assets/images/budget-variance.png" alt="Budget Variance" class="finance-card-img">
+              </div>
+              <div class="finance-card-media-label">analytics / variance visual</div>
+              <div class="finance-badge">budgeting</div>
+              <h3 class="finance-card-title">Live Budget vs. Actual Engines</h3>
+              <p class="finance-card-desc">Variance flagged the moment it happens — not at month-end.</p>
+              <ul class="finance-card-bullets">
+                <li>Real-time department spending sync</li>
+                <li>Automated alert triggers on threshold breach</li>
+                <li>Dynamic variance prediction modeling</li>
+              </ul>
             </div>
           </div>
+
+          <!-- Banner: What engagements typically target -->
+          <div class="finance-banner glow-card" data-sr="up">
+            <div class="finance-banner-eyebrow">what engagements typically target</div>
+            <div class="finance-stats-row">
+              <div class="finance-stat-item">
+                <div class="finance-stat-num">Faster</div>
+                <div class="finance-stat-label">month-end close</div>
+              </div>
+              <div class="finance-stat-item">
+                <div class="finance-stat-num">Near-zero</div>
+                <div class="finance-stat-label">manual reconciliation effort</div>
+              </div>
+              <div class="finance-stat-item">
+                <div class="finance-stat-num">Live</div>
+                <div class="finance-stat-label">budget-to-actual visibility</div>
+              </div>
+            </div>
+            <p class="finance-banner-footer">Board-ready numbers throughout the month — not just at close.</p>
+          </div>
+
+        </div>
       </section>
 
       <div class="intel">
