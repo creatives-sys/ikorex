@@ -1778,6 +1778,39 @@ footer {
   margin: 0;
 }
 
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.social-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.social-link:hover {
+  color: var(--blue) !important;
+  border-color: var(--blue) !important;
+  background: rgba(0, 136, 255, 0.06);
+  transform: translateY(-2px);
+}
+
 .footer-heading {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 11px;
