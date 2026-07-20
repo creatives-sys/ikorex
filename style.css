@@ -2385,31 +2385,204 @@ footer {
   margin-top: 16px;
 }
 
-/* About Story Image */
-.about-story-img-wrap {
+/* Executive Leadership Card Showcase */
+.leadership-story-wrap {
   width: 100%;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   position: relative;
   z-index: 2;
 }
 
-.about-story-img {
+.leadership-story-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px 28px;
+  box-shadow: var(--shadow-apple);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: var(--transition-apple);
+  position: relative;
+  overflow: hidden;
+}
+
+.leadership-story-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--grad);
+  border-radius: 24px 24px 0 0;
+}
+
+.leadership-story-card:hover {
+  border-color: var(--border-glow);
+  box-shadow: 0 20px 45px var(--shadow-glow), var(--shadow-apple);
+}
+
+.leadership-card-header {
+  margin-bottom: 24px;
+}
+
+.leadership-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: rgba(0, 136, 255, 0.08);
+  border: 1px solid rgba(0, 136, 255, 0.18);
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 8px var(--blue);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.leadership-card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.founders-dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.founder-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.founder-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--border-glow);
+  box-shadow: 0 10px 25px rgba(0, 136, 255, 0.1);
+}
+
+.founder-img-wrap {
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1.15;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--darker);
+}
+
+.founder-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
   display: block;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.about-story-img-wrap:hover .about-story-img {
-  transform: scale(1.03);
+.founder-card:hover .founder-img {
+  transform: scale(1.06);
 }
 
-body.light-theme .about-story-img-wrap {
+.founder-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(3, 5, 8, 0.4) 100%);
+  pointer-events: none;
+}
+
+.founder-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.founder-role-badge {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--blue);
+  text-transform: uppercase;
+}
+
+.founder-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.founder-tagline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+/* Light Theme Overrides */
+body.light-theme .leadership-story-card {
+  background: rgba(255, 255, 255, 0.85);
   border-color: rgba(0, 0, 0, 0.06);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .founder-card {
+  background: rgba(245, 245, 247, 0.9);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .founder-card:hover {
+  background: #FFFFFF;
+  border-color: rgba(0, 102, 204, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 102, 204, 0.08);
+}
+
+body.light-theme .founder-img-wrap {
+  border-color: rgba(0, 0, 0, 0.08);
+  background: #F5F5F7;
+}
+
+body.light-theme .founder-overlay {
+  background: linear-gradient(180deg, transparent 70%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+@media (max-width: 576px) {
+  .founders-dual-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 /* VALUES SECTION */
