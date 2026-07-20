@@ -2298,6 +2298,68 @@ footer {
   flex-shrink: 0;
 }
 
+.svc-partner {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--mid);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text2);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.svc-partner:hover {
+  color: var(--blue);
+}
+
+.svc-partner-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.svc-partner-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  background: #FFFFFF;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  height: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.svc-partner:hover .svc-partner-logo-wrap {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 113, 227, 0.15);
+}
+
+.svc-partner-logo {
+  max-height: 20px;
+  max-width: 110px;
+  width: auto;
+  object-fit: contain;
+}
+
+.svc-partner-arrow {
+  margin-left: auto;
+  stroke: var(--muted);
+  transition: transform 0.3s ease, stroke 0.3s ease;
+  flex-shrink: 0;
+}
+
+.svc-partner:hover .svc-partner-arrow {
+  stroke: var(--blue);
+  transform: translateX(3px);
+}
+
 /* ==========================================================================
    ABOUT PAGE
    ========================================================================== */

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 40" width="170" height="40">
+  <defs>
+    <linearGradient id="ieLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="4" width="32" height="32" rx="10" fill="url(#ieLogoGrad)"/>
+  <path d="M18 26s5.5-2.75 5.5-6.875V14.375L18 12.308l-5.5 2.067V19.125c0 4.125 5.5 6.875 5.5 6.875z" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="42" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="19" fill="#1E293B">IntelliEyes</text>
+</svg>
